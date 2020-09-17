@@ -6,5 +6,5 @@
 
 -https://github.com/Yihan-hub/wnm617_202090_01
 
-http://yihan.biz/aau/wnm617/su.yihan/initializr/
+-http://yihan.biz/aau/wnm617/su.yihan/initializr/
 

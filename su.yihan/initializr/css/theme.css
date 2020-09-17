@@ -1,0 +1,65 @@
+/*nav li:first-child a {
+	background-color: purple;
+}*/
+body {
+	background-color: #d5d5d6;
+	text-transform: uppercase;
+}
+/*text-transform from http://www.maomao365.com/?p=11059*/
+
+.header-container, .footer-container, .main aside {
+	background-color: #3d115a;
+	border-bottom-color: #aaa;
+	border-top-color: black;
+}
+
+.title {
+	width: 400px;
+  height: 100px;
+  
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 3s;
+
+  padding-left: 50px; padding-top: 17px;
+}
+
+nav a {
+	background-color: #03702d;
+}
+
+
+/*not work*/
+nav a:hover, nav a: visited {
+	padding: 60px;
+	background-color: pink;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Ranchers', cursive;
+	text-transform: capitalize;
+}
+
+h1 {
+	font-size: 5em;
+	text-transform: uppercase;
+}
+
+/*center the footer and article footer h3
+
+footer {
+	text-align:center;
+}*/
+
+.main aside {
+	font-size: 2em;
+    font: caption; 
+}
+
+.footer-container footer {
+	text-align: center;
+	font-size: 3em;
+}
