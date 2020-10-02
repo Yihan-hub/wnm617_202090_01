@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Mobile</title>
+
+	<link rel="stylesheet" type="text/css" href="">
+
+	<script src="../lib/js/jquery-2.2.4.min.js"></script>
+	<script src="../lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+	<section data-role="page" id="page1">
+		<header data-role="header"></header>
+			<h1>Page 1</h1>
+		<div data-role="main">
+			This ia a page
+			<ul>
+				<li>
+					<a href="#page2">page 2</a>
+				</li>
+			</ul>
+		</div>
+	    <footer data-role="footer">
+	    	<h1>Footer!</h1>
+	    </footer>
+	</section>
+
+	<section data-role="page" id="page2">
+		<header data-role="header"></header>
+			<h1>Page 2</h1>
+		<div data-role="main">
+			This ia also a page
+		</div>
+	    <footer data-role="footer">
+	    	<h1>Footer!</h1>
+	    </footer>
+	</section>
+
+	<section data-role="page" id="page3">
+		<header data-role="header"></header>
+			<h1>Page 3</h1>
+			<a href="#" data-role="back">Back</a>
+		<div data-role="main">
+			This ia still a page
+			<ul>
+				<li>
+					<a href="#page3"></a>
+				</li>
+			</ul>
+		</div>
+
+	</section>
+
+</body>
+</html>
