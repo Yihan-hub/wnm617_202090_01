@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>jQuery Mobile</title>
 
-	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="../lib/css/jquery.mobile.structure-1.4.5.min.css">
 
 	<script src="../lib/js/jquery-2.2.4.min.js"></script>
 	<script src="../lib/js/jquery.mobile-1.4.5.min.js"></script>
@@ -14,45 +14,62 @@
 <body>
 
 	<section data-role="page" id="page1">
-		<header data-role="header"></header>
+		<header data-role="header">
 			<h1>Page 1</h1>
+		</header>
+			
 		<div data-role="main">
 			This ia a page
 			<ul>
-				<li>
-					<a href="#page2">page 2</a>
-				</li>
+				<li><a href="#page2">page 2</a></li>
+				<li><a href="#page3">page 3</a></li>
 			</ul>
 		</div>
 	    <footer data-role="footer">
 	    	<h1>Footer!</h1>
 	    </footer>
 	</section>
+
 
 	<section data-role="page" id="page2">
-		<header data-role="header"></header>
+		<header data-role="header">
 			<h1>Page 2</h1>
+		</header>
+			
 		<div data-role="main">
 			This ia also a page
+			<ul>
+				<li><a href="#page1">page 1</a></li>
+				<li><a href="#page3">page 3</a></li>
+			</ul>
 		</div>
 	    <footer data-role="footer">
 	    	<h1>Footer!</h1>
 	    </footer>
 	</section>
 
+	
+
+
+
 	<section data-role="page" id="page3">
-		<header data-role="header"></header>
+		<header data-role="header">
+			<a href="#" data-rel="back">Back</a>
+		
 			<h1>Page 3</h1>
-			<a href="#" data-role="back">Back</a>
+		</header>
+			
 		<div data-role="main">
-			This ia still a page
+			This ia still a page.
+			<h2>A rel back button</h2>
+			<h2>a data rel stands for a data relationship. And it's not a data role.</h2>
+
 			<ul>
 				<li>
-					<a href="#page3"></a>
+					<a href="#page1">page 1</a>
 				</li>
 			</ul>
 		</div>
-
 	</section>
 
 </body>

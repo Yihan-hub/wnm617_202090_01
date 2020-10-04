@@ -206,7 +206,7 @@ a {
 	left:0;
 }
 
-
+/*1000px wide or less, 1em padding for the container*/
 @media (max-width: 1000px) {
 	.container {
 		padding: 0 1em;
@@ -215,13 +215,15 @@ a {
 
 .menu-button {display: none;}
 
+/*HOW: wrap the li in nav*/
+/*500px wide or less, ????  */
 @media (max-width: 500px) {
-	.navbar>.display-flex{
+	.navbar>.display-flex {
 		flex-wrap: wrap;
 	}
 	.navbar .nav {
 		width: 100%;
-	}
+}
 
 	.menu-button {display: block;}
 
