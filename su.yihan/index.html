@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head><base href="https://yihan.biz/aau/wnm617/su.yihan/">
+<head>
+   <!-- <base href="https://yihan.biz/aau/wnm617/su.yihan/"> makes most files not loaded-->
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,10 +9,15 @@
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
-
+<!-- always load library code before local code --> 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
+<!-- exception: JQuery Mobile wants to be loaded after our app js, to be loaded last  -->
    <script src="js/app.js"></script>
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+
+   
+
 </head>
 
 <body class="ui-mobile-viewport ui-overlay-a">
@@ -20,7 +26,7 @@
    <section data-role="page" id="signin-page" data-url="signin-page" tabindex="0" class="ui-page ui-page-theme-a ui-page-active" style="">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-<!-- NOT WORK --><img src="img/icon.png">
+            <img src="img/icon.png">
          </div>
          	
 
@@ -37,7 +43,7 @@
                <a href="#list-page" class="form-button ui-link">Sign In</a>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Don't have an account? <a href="#signup-page" class="ui-link">Sign Up</a>!
+               Don't have an account? <a href="#signup-page" class="ui-link">Sign Up</a>! <a href="#map-page">Skip</a>
             </div>
          </form>
       </div>
@@ -58,18 +64,40 @@
                <a href="#list-page" class="form-button">Sign Up</a>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Already have an account? <a href="#signin-page">Sign In</a>!
+               Already have an account? <a href="#signin-page">Sign In</a>! <a href="#map-none-page">Skip</a>
+<!-- link to #manp-none-page not work ???-->
             </div>
          </form>
       </div>
    </section>
+<!-- add a map-none-page -->
+   <section data-role="page" id="map-none-page" data-url="recent-none-page" tabindex="0" class="ui-page ui-page-theme-a" style="">
+       <header data-role="header" role="banner" class="ui-header ui-bar-inherit">
+         <h1 class="ui-title" role="heading" aria-level="1">List</h1>         
+      </header>
+      <div data-role="main">
+         <p>Animal's location will show here 
+after you adding it.</p>
+      </div>
+      <div>
+         <button>Add an animal</button>
+<!-- link to the animal adding page, creat that page -->
+      </div>
+      <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
+         <ul>
+            <li><a href="#map-page" class="ui-link">Map</a></li>
+            <li><a href="#list-page" class="ui-link">List</a></li>
+            <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
+         </ul>
+      </footer>
+   </section>
 
-   <section data-role="page" id="recent-page" data-url="recent-page" tabindex="0" class="ui-page ui-page-theme-a" style="">
+   <section data-role="page" id="map-page" data-url="recent-page" tabindex="0" class="ui-page ui-page-theme-a" style="">
       <div data-role="main">
       </div>
       <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
          <ul>
-            <li><a href="#recent-page" class="ui-link">Recent</a></li>
+            <li><a href="#map-page" class="ui-link">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
@@ -78,7 +106,7 @@
 
    <section data-role="page" id="list-page" data-url="list-page" tabindex="0" class="ui-page ui-page-theme-a" style="">
       <header data-role="header" role="banner" class="ui-header ui-bar-inherit">
-         <h1 class="ui-title" role="heading" aria-level="1">Animals</h1>
+         <h1 class="ui-title" role="heading" aria-level="1">List</h1>
          <ul>
             <li class="flex-stretch"></li>
             <li><a href="#" class="ui-link">+</a></li>
@@ -101,7 +129,7 @@
       </div>
       <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
          <ul>
-            <li><a href="#recent-page" class="ui-link">Recent</a></li>
+            <li><a href="#recent-page" class="ui-link">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
