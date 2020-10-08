@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <!-- Problem: when reloading the page, it was messed up: it showed the sign-up and sign-in page at the same time. But, if I go to this page from the link on index page, there is no such problem.-->
    <!-- Don't ever copy the code in the "Elements" of the browser inspect bcz the code in it has been changed by the JQuery, so go to the "Source" then copy!-->
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
 <body>
 
 <!-- page 1: sign-in -->
-   <section data-role="page" id="signin-page" data-url="signin-page"style="">
+   <section data-role="page" id="signin-page">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
 <!-- Sep 24 01:59:25 the flex stretch at the top push our form down to the bottom of our page instead of in the center and also fills the width. -->
@@ -66,9 +67,6 @@
 
 
 
-<!-- Problem: when reloading the page, it was messed up: it showed the sign-up and sign-in page at the same time. But, if I go to this page from the link on index page, there is no such problem.-->
-
-
             <div class="form-control">
                <a href="#map-none-page" class="form-button">Sign Up</a>
             </div>
@@ -103,32 +101,32 @@ after you adding it.</p>
    </section>
 
 <!-- page 3_2: map-->
-   <section data-role="page" id="map-page" data-url="map-page" tabindex="0" class="ui-page ui-page-theme-a" style="">
+   <section data-role="page" id="map-page">
       <div data-role="main">
          <div class="floater right bottom">
-            <div class="btn-circle" data-activate="#map-drawer">&plus;</div>
-
+            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
+<!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->
+         </div>
+         <img src="img/map.png">
+      
+         <div class="modal" id="map-drawer">
+            <!-- <div class="modal-back" data-deactivate="#map-drawer"></div> -->
+            <div class="modal-drawer left">
+            <!-- OR <div class="modal-drawer top"> ect. -->
+               <div class="modal-head">Title</div>
+               <div class="modal-body">
+                  Links and such
+               </div> 
+            </div>
+         </div>
       </div>
-      <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
+      <footer data-role="footer">
          <ul>
             <li><a href="#map-page" class="ui-link">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
       </footer>
-
-
-      <div class="modal" id="list-add-animal">
-         <div class="modal-back" data-deactivate="#map-drawer"></div>
-         <div class="modal-drawer left">
-         <!-- OR <div class="modal-drawer top"> ect. -->
-
-            <div class="modal-head">Title</div>
-            <div class="modal-body">
-               Links and such
-            </div> 
-         </div>
-      </div>
    </section>
 <!-- page 4: list-->
 
@@ -207,22 +205,45 @@ after you adding it.</p>
    </section>
    
 <!-- page 5: user profile-->
-   <section data-role="page" id="user-profile-page" data-url="user-profile-page" tabindex="0" class="ui-page ui-page-theme-a" style="">
+   <section data-role="page" id="user-profile-page">
       <div data-role="main">
          User Profile<br>
-         <a href="#signin-page">Logout</a>
+<!-- Oct 1 -->
+         <div class="user-profile-image">
+            <img src="https://via.placeholder.com/600x500?text=profile" alt="">
+         </div>
+         <div><a href="#user-settings-page">Settings</a></div>
+         
       </div>
-      <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
+      <footer data-role="footer">
          <ul>
-            <li><a href="#map-page" class="ui-link">Map</a></li>
-            <li><a href="#list-page" class="ui-link">List</a></li>
-            <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
+            <li><a href="#map-page">Map</a></li>
+            <li><a href="#list-page">List</a></li>
+            <li><a href="#user-profile-page">Profile</a></li>
          </ul>
       </footer>
    </section>
 
+   <section data-role="page" id="user-settings-page">
+      <header data-role="header">
+         <h1>User Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <ul class="settings-list">
+            <li><a href="#user-profile-edit-page">Update Profile</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div>
+   </section>
+
+
+
+
 <!-- page 6: animal profile-->
-   <section data-role="page" id="animal-profile-page" data-url="animal-profile-page">
+   <section data-role="page" id="animal-profile-page">
       <header data-role="header">
          <h1>Animal Profile</h1>
          <ul>
@@ -235,7 +256,7 @@ after you adding it.</p>
    </section>
 
 <!-- page 7: animal-adding-page -->
-   <section data-role="page" id="animal-adding-page" data-url="animal-adding-page">
+   <section data-role="page" id="animal-adding-page">
       <header data-role="header">
          <h1>Add an Animal</h1>
          <ul>

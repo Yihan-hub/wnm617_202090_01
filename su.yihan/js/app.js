@@ -3,19 +3,17 @@
 
 
 
-
-
 $(()=>{
 
 
-   // checkUserId();
+   checkUserId();
 
    // event delegation
    $(document)
 
 
 
-   FORM SUBMITS
+   // FORM SUBMITS
 
    .on("submit","#signin-form",function(e){
       e.preventDefault();
@@ -26,7 +24,7 @@ $(()=>{
 
 
 
-   ANCHOR CLICKS
+   // ANCHOR CLICKS
 
    .on("click",'.js-logout',function(e){
       sessionStorage.removeItem('userId');
@@ -50,3 +48,8 @@ $(()=>{
    })
 
 })
+
+
+
+
+

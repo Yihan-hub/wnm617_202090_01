@@ -222,7 +222,7 @@ a {
    justify-content:center;*/
    flex-direction: column;
 }
-#recent-page [data-role='main'] {
+#map-page [data-role='main'] {
    background-image:url('../img/map_example.jpg');
    background-position:center;
    background-size:cover;
@@ -348,4 +348,43 @@ a {
    font-size:1.5em;
    border-radius:2em;
    box-shadow:2px 2px 5px rgba(0,0,0,0.15);
+}
+
+
+/*profile*/
+.user-profile-image img {
+  width:calc(100vmin - 4em);
+  height:calc(100vmin - 4em);
+  /*height :calc(100vmin - 4em);  the space matters!!!*/
+  margin:2em;
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+
+.settings-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.settings-list li {
+  padding: 0.5em 1em;
+
+}
+.settings-list li:not(:first-child) {
+  border-top: 1px solid var(--color-neutral-medium);
+
+  }
+.settings-list a{
+  display:block;
+  position:relative;
+}
+
+.settings-list a:not{[href:'#'])::after{
+  position:absolute;
+  content: '>';
+  top: 50%;
+
 }
