@@ -327,6 +327,19 @@ a {
 
 
 
+.modal-toast {
+  position: absolute;
+  width: 50%;
+  min-height: var(--header-height);
+  background-color: #e6dfa6;
+  border-radius: 0.2em;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+    left: 50%;
+    text-align: center;
+    padding: 1em;
+    transition:all 0.3s;
+}
+
 
 /* FLOATER */
 .floater { position: absolute; }
