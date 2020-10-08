@@ -22,7 +22,7 @@ const checkSigninForm = () => {
 const checkUserId = () => {
 	let p = ['#signin-page','signup-page',''];
 
-	if (sessionStorage.userId) === undefined {
+	if(sessionStorage.userId === undefined) {
 		// not logged in
 		if(!p.some(
 			// function(0){ return window.location.hash === 0 ?true: }
