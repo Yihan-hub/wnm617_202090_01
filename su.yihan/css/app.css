@@ -333,11 +333,23 @@ a {
   min-height: var(--header-height);
   background-color: #e6dfa6;
   border-radius: 0.2em;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
-    left: 50%;
-    text-align: center;
-    padding: 1em;
-    transition:all 0.3s;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+  left: 50%;
+  text-align: center;
+  padding: 1em;
+  transition:all 0.3s;
+}
+.modal-toast.top {
+   top:1em;
+   transform:translate(-50%,-1em);
+}
+.modal-toast.bottom {
+   bottom:1em;
+   transform:translate(-50%,1em);
+}
+.modal.active .modal-toast {
+   transform: translate(-50%,0);
+   pointer-events:initial;
 }
 
 
