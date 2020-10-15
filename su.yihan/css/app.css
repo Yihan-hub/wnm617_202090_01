@@ -385,29 +385,22 @@ a {
 
 
 
-
-
-
-
-
-
 /*profile*/
 .user-profile-image img {
   width:calc(60vmin - 4em);
   height:calc(60vmin - 4em);
   /*height :calc(100vmin - 4em);  the space matters!!!*/
-  margin: 4em 6em 4em 6em;;
-  border-radius: 50%;
-
-  object-fit: cover;
+  margin:4em 6em 4em 6em;;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 
 /*SETTINGS*/
 .settings-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style-type:none;
+  padding:0;
+  margin:0;
 }
 .settings-list li {
   padding: 0.5em 1em;
