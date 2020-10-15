@@ -8,6 +8,9 @@
 
    <title>Ani-Trace</title>
 
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
 <!-- always load library code before local code --> 
@@ -41,7 +44,7 @@
                <input type="submit" data-role="none" class="form-button" value="Sign In">
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Don't have an account? <a href="#signup-page" class="ui-link">Sign Up</a>! <!-- <a href="#map-page">Skip</a> for the app can only be visit after signing in. ex. you can visit ins website, but not the app-->
+               Don't have an account? <a href="#signup-page" class="ui-link"><strong>Sign Up</strong></a>! <!-- <a href="#map-page">Skip</a> for the app can only be visit after signing in. ex. you can visit ins website, but not the app-->
             </div>
          </form>
       </div>
@@ -77,7 +80,7 @@
                <a href="#map-none-page" class="form-button">Sign Up</a>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Already have an account? <a href="#signin-page">Sign In</a>! 
+               Already have an account? <a href="#signin-page"><strong>Sign In</a>! 
 <!-- link to #manp-none-page not work ???-->
             </div>
          </form>
@@ -91,7 +94,7 @@
          <h1 class="ui-title" role="heading" aria-level="1">Map</h1>         
       </header>
       <div data-role="main">
-         <p>Animal's location will show here 
+         <p style="text-align: center;">Animal's location will show here 
 after you adding it.</p>
       </div>
       <div class="form-control">
@@ -109,48 +112,41 @@ after you adding it.</p>
 <!-- page 4: map-->
    <section data-role="page" id="map-page">
       <div data-role="main">
-         <div class="floater right bottom">
-            <!-- <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> -->
+         <div class="floater right top">
+            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
 <!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->
             
-            <div class="btn-circle" data-activate="#list-add-animal">&plus;</div>
+          
          </div>
          <img src="img/map.png">
-<!-- add -->
-      </div>
+     
+         <div class="modal" id="map-drawer">
+            <!-- <div class="modal-back" data-deactivate="#map-drawer"></div> -->
+            <div class="modal-drawer bottom">
+            <!-- OR <div class="modal-drawer top"> ect. -->
+               <div class="modal-head">Add an animal
+                  
+               </div>
+               <div class="modal-body">
+                  Choose an animal
+                  <select name="" id="" class="form-option" data-role="none">
+                     <option>Tom</option>
+                     <option>Jerry</option>
+                  </select>
+                  <hr>
+                  Recommanded Location:
 
-      <div class="modal" id="list-add-animal">
-         <div class="modal-back" data-deactivate="#list-add-animal"></div>
-         <form class="modal-popup" id="list-add-animal-form" data-ajax="false">
-            <div class="modal-head"><h1>Add Animal</h1></div>
-            <div class="modal-body">
-               <div class="form-control">
-                  <label for="list-add-name" class="form-label">Animal Name</label>
-                  <input id="list-add-name" type="text" class="form-input" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-type" class="form-label">Animal Type</label>
-                  <input id="list-add-type" type="text" class="form-input" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-breed" class="form-label">Animal Breed</label>
-                  <input id="list-add-breed" type="text" class="form-input" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-other-description" class="form-label">other descripton</label>
-                  <input id="list-add-other-description" type="text" class="form-input" data-role="none">
-               </div>
+                  <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="Alta Plaza Park">
+          
+                  <!-- <br>Alta Plaza Park
+                  <input id="addrecord-page " type="default-location" class="form-default" data-role="none" placeholder="Incorrect? Type in a new one!"> -->
+                  
+<!-- data-toggle="#map-drawer" -->
+                  <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
+               </div> 
             </div>
-            <div class="modal-foot">
-               <input type="submit" value="Save" data-role="none" class="form-button">
-            </div>
-         </form>
+         </div>
       </div>
-
-
-
-      
-
 
       <footer data-role="footer">
          <ul>
@@ -167,6 +163,9 @@ after you adding it.</p>
          <h1>Add an Animal</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+
          </ul>
       </header>
       <div data-role="main">
@@ -174,6 +173,14 @@ after you adding it.</p>
             <div class="form-control">
                <label for="add-animal-name" class="form-label">Animal Name</label>
                <input id="add-animal-name" type="text" class="form-input" data-role="none" placeholder="Type the name of the animal">
+            </div>
+            <div class="form-control">
+               <label for="add-animal-type" class="form-label">Animal Type</label>
+               <input id="add-animal-type" type="text" class="form-input" data-role="none" placeholder="Type of the animal">
+            </div>
+            <div class="form-control">
+               <label for="add-animal-breed" class="form-label">Animal Breed</label>
+               <input id="add-animal-breed" type="text" class="form-input" data-role="none" placeholder="Breed of the animal">
             </div>
             <div class="form-control">
                <label for="animal-description" class="form-label">Description</label>
@@ -189,40 +196,97 @@ after you adding it.</p>
          <h1>Animals</h1>
          <ul>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-animal">+</a></li>
+            <li>
+               <!-- <a href="#" data-activate="#list-add-animal">+</a> -->
+<!-- <a href="#" data-activate="#animal-adding-page">+</a></li>  NOT WORK
+ -->
+<a href="#animal-adding-page" data-activate="#animal-adding-page" class="ui-link">+</a>
+
+            </li>
          </ul>
       </header>
       <div data-role="main">
          <div class="overscroll">
-            <ul>
-               <!-- li*10>a[href=#animal-profile-page]>{Animal $} -->
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
+            <div class="animallist">
 
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
+               <!-- <a href="#animal-profile-page" class="animallist-item" > -->
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <!-- <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt=""> -->
+                        <img src="img/Tom.png" alt="">
 
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
-            </ul>
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Tom</div>
+                        <div class="animallist-type"><strong>Type</strong> Cat</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
+                     </div>
+                  </div>
+               </a>
+
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <img src="img/Jerry.png" alt="">
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Jerry</div>
+                        <div class="animallist-type"><strong>Type</strong> Dog</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Corgi</div>
+                     </div>
+                  </div>
+               </a>
+
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Patric</div>
+                        <div class="animallist-type"><strong>Type</strong> Cat</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
+                     </div>
+                  </div>
+               </a>
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Tom</div>
+                        <div class="animallist-type"><strong>Type</strong> Cat</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
+                     </div>
+                  </div>
+               </a>
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Tom</div>
+                        <div class="animallist-type"><strong>Type</strong> Cat</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
+                     </div>
+                  </div>
+               </a>
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Tom</div>
+                        <div class="animallist-type"><strong>Type</strong> Cat</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
+                     </div>
+                  </div>
+               </a>              
+            </div>
          </div>
       </div>
       <footer data-role="footer">
@@ -270,24 +334,26 @@ after you adding it.</p>
       <header data-role="header">
          <h1>Animal Profile</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back">Back</a></li>        
+            <li class="flex-stretch"></li>
+            <!-- <li><a href="#animal-settings-page">Update</a></li>    -->         
          </ul>
       </header>
       <div data-role="main">
-         
-      </div>
-   </section>
-
-   <!-- page 9: user profile-->
-   <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-         <h1>User Profile</h1>
-<!-- Oct 1 -->
          <div class="user-profile-image">
-            <img src="https://via.placeholder.com/600x500?text=profile" alt="">
+            <img src="img/Tom.png" alt="">
          </div>
-         <div><a href="#user-settings-page">Settings</a></div>
-         
+         <div class="profile">
+            <div class="profile-edit">        
+               <h2 id="profile-name">Tom</h2>
+            </div>
+            <h5>Type: Cat / Breed: Bombay cat
+               <br>Description: Arrogant, lazy, sensitive
+            </h5>
+         </div>
+         <div class="container">
+         <a href="#animal-settings-page" class="form-button ui-link">Editing</a>   
+         </div>       
       </div>
       <footer data-role="footer">
          <ul>
@@ -295,23 +361,144 @@ after you adding it.</p>
             <li><a href="#list-page">List</a></li>
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
-      </footer>
+      </footer>       
    </section>
+
+<!-- animal setting -->
+
+   <section data-role="page" id="animal-settings-page">
+      <header data-role="header">
+         <h1>Animal Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         </ul>
+      </header>
+      <!-- <div data-role="main">
+         <ul class="settings-list">
+            <li><a href="#user-profile-edit-page">Update Profile</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div> -->
+
+      <form id="animal-edit-form" data-ajax="false" style="padding:1em">
+            <div class="form-control">
+               <label for="animal-edit-username" class="form-label">Animal name</label>
+               <input id="animal-edit-username" type="text" class="form-input" data-role="none" placeholder="Type the animal name" value="Tom">
+            </div>
+            <div class="form-control">
+               <label for="animal-edit-type" class="form-label">Type</label>
+               <input id="animal-edit-type" type="text" class="form-input" data-role="none" placeholder="" value="Cat">
+            </div>
+            <div class="form-control">
+               <label for="animal-edit-breed" class="form-label">Breed</label>
+               <input id="animal-edit-breed" type="text" class="form-input" data-role="none" placeholder="" value="Bombay Cat">
+            </div>
+            <div class="form-control">
+               <label for="animal-edit-description" class="form-label">Description</label>
+               <input id="animal-edit-description" type="text" class="form-input" data-role="none" placeholder="" value="Arrogant, lazy, sensitive">
+            </div>
+         </form>     
+      </section>
+
+<!-- page 9: user profile-->
+   <section data-role="page" id="user-profile-page">
+      <header data-role="header">
+         <h1>Yihan's profile</h1>
+         <ul>  
+            <li><a href="#user-settings-page">Update</a></li>          
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-logout">Logout</a></li>            
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="user-profile-image">
+            <img src="img/user.png" alt="">
+         </div>
+         <div class="profile">
+            <div class="profile-edit">        
+               <h2 id="profile-name">Yi Han</h2>
+            </div>
+            <h4>City: Canton, yihan@art.edu</h3>
+         </div>
+         <div class="container">
+         <a href="#user-password-edit-page" class="form-button ui-link">Change Password</a>   
+         </div>       
+      </div>
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#map-page">Map</a></li>
+            <li><a href="#list-page">List</a></li>
+            <li><a href="#user-profile-page">Profile</a></li>
+         </ul>
+      </footer>       
+   </section>
+
 <!-- page 10: user setting -->
    <section data-role="page" id="user-settings-page">
       <header data-role="header">
          <h1>User Settings</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
          </ul>
       </header>
-      <div data-role="main">
+      <!-- <div data-role="main">
          <ul class="settings-list">
             <li><a href="#user-profile-edit-page">Update Profile</a></li>
             <li><a href="#" class="js-logout">Logout</a></li>
          </ul>
+      </div> -->
+
+      <form id="user-edit-form" data-ajax="false" style="padding:1em">
+         <div class="form-control">
+            <label for="user-edit-username" class="form-label">Username</label>
+            <input id="user-edit-username" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="Yihan">
+         </div>
+         <div class="form-control">
+            <label for="user-edit-city" class="form-label">City</label>
+            <input id="user-edit-city" type="text" class="form-input" data-role="none" placeholder="Type your city" value="Canton">
+         </div>
+         <div class="form-control">
+            <label for="user-edit-email" class="form-label">Email</label>
+            <input id="user-edit-email" type="text" class="form-input" data-role="none" placeholder="Type your user email" value="yihan@art.edu">
+         </div>
+      </form>
+   </section>
+
+<!-- password-edit -->
+
+   <section data-role="page" id="user-password-edit-page">
+      <header data-role="header">
+         <h1>Change Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-password-form" data-ajax="false" style="padding:1em">
+            <div class="form-control">
+               <label for="user-password-oldpassword" class="form-label">Old Password</label>
+               <input id="user-password-oldpassword" type="password" class="form-input" data-role="none" placeholder="Type your old password">
+            </div>
+            <div class="form-control">
+               <label for="user-password-password" class="form-label">New Password</label>
+               <input id="user-password-password" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+            </div>
+            <div class="form-control">
+               <label for="user-password-confirm" class="form-label">Confirm Password</label>
+               <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+            </div>
+         </form>
       </div>
    </section>
+
+
+
 
 
 
