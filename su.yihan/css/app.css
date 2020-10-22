@@ -572,6 +572,6 @@ th {
   height:calc(60vmin - 4em);
   /*height :calc(100vmin - 4em);  the space matters!!!*/
   margin:4em 6em 2em 6em;;
-  border-radius:28%%;
+  border-radius:28%;
   object-fit:cover;
 }
