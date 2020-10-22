@@ -75,7 +75,7 @@
             </div>
             <div class="form-control">
                <!-- <a href="#map-none-page" class="form-button">Sign Up</a> -->
-               <a href="#list-page" class="form-button">Sign Up</a>               
+               <a href="#map-none-page" class="form-button">Sign Up</a>               
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
                Already have an account? <a href="#signin-page" style="color: #512D99">Sign In</a>! 
@@ -91,14 +91,14 @@
          <h1 class="ui-title" role="heading" aria-level="1">Map</h1>         
       </header>
       <div data-role="main">
-         <p style="text-align: center;">Animal's location will show here after you adding it.</p>
+         <p style="text-align: center;">Animal's location will show here. <br>So you might want to</p>
       </div>
       <div class="form-control">
          <a href="#animal-adding-page" class="form-button ui-link">Add an animal</a>
       </div>
       <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
          <ul>
-            <li><a href="#map-page" class="ui-link">Map</a></li>
+            <li><a href="#map-page" class="ui-link" style="color:#512D99">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
@@ -118,7 +118,14 @@
             <!-- <div class="modal-back" data-deactivate="#map-drawer"></div> -->
             <div class="modal-drawer bottom">
             <!-- OR <div class="modal-drawer top"> ect. -->
-               <div class="modal-head">Add an animal
+               <!-- <div class="modal-head"> -->
+               <div class="modal-head" data-role="header">
+                  <h5>Add a Record</h5>
+               <ul>   
+                  <!-- <li><a href="#" data-rel="back"></a></li> -->
+                  <li class="flex-stretch"></li>
+                  <li><a href="#" data-rel="back">🞨</a></li>
+               </ul>
                   
                </div>
                <div class="modal-body">
@@ -128,10 +135,10 @@
                      <option>Jerry</option>
                   </select>
                   <hr>
-                  Recommanded Location:
-                  <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="Alta Plaza Park">         
-                  <!-- <br>Alta Plaza Park
-                  <input id="addrecord-page " type="default-location" class="form-default" data-role="none" placeholder="Incorrect? Type in a new one!"> -->
+                  Location: Alta Plaza Park
+                  <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Or type the location">   
+                  <!-- <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Or type the location" value="Alta Plaza Park">   -->       
+                  
                   
 <!-- data-toggle="#map-drawer" -->
                   <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
@@ -142,7 +149,7 @@
 
       <footer data-role="footer">
          <ul>
-            <li><a href="#map-page" class="ui-link">Map</a></li>
+            <li><a href="#map-page" class="ui-link" style="color:#512D99">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
@@ -157,7 +164,6 @@
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
             <li><a href="#" data-rel="back">Save</a></li>
-
          </ul>
       </header>
       <div data-role="main">
@@ -192,7 +198,7 @@
                <!-- <a href="#" data-activate="#list-add-animal">+</a> -->
 <!-- <a href="#" data-activate="#animal-adding-page">+</a></li>  NOT WORK
  -->
-<a href="#animal-adding-page" data-activate="#animal-adding-page" class="ui-link">+</a>
+<a href="#animal-adding-page" data-activate="#animal-adding-page" class="ui-link">🞢</a>
 
             </li>
          </ul>
@@ -233,7 +239,7 @@
                <a href="#animal-profile-page" class="ui-link" >
                   <div class="animallist-item">
                      <div class="animallist-icon">
-                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                        <img src="img/Patrick.jpg" alt="">
                      </div>
                      <div class="animallist-description">
                         <div class="animallist-name">Patric</div>
@@ -245,7 +251,9 @@
                <a href="#animal-profile-page" class="ui-link" >
                   <div class="animallist-item">
                      <div class="animallist-icon">
-                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                        <!-- <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt=""> -->
+                        <img src="img/Tom.png" alt="">
+
                      </div>
                      <div class="animallist-description">
                         <div class="animallist-name">Tom</div>
@@ -254,37 +262,40 @@
                      </div>
                   </div>
                </a>
+
                <a href="#animal-profile-page" class="ui-link" >
                   <div class="animallist-item">
                      <div class="animallist-icon">
-                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
+                        <img src="img/Jerry.png" alt="">
                      </div>
                      <div class="animallist-description">
-                        <div class="animallist-name">Tom</div>
+                        <div class="animallist-name">Jerry</div>
+                        <div class="animallist-type"><strong>Type</strong> Dog</div>
+                        <div class="animallist-breed"><strong>Breed</strong> Corgi</div>
+                     </div>
+                  </div>
+               </a>
+
+               <a href="#animal-profile-page" class="ui-link" >
+                  <div class="animallist-item">
+                     <div class="animallist-icon">
+                        <img src="img/Patrick.jpg" alt="">
+                     </div>
+                     <div class="animallist-description">
+                        <div class="animallist-name">Patric</div>
                         <div class="animallist-type"><strong>Type</strong> Cat</div>
                         <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
                      </div>
                   </div>
                </a>
-               <a href="#animal-profile-page" class="ui-link" >
-                  <div class="animallist-item">
-                     <div class="animallist-icon">
-                        <img src="https://via.placeholder.com/400x400/77d/fff?text=cat" alt="">
-                     </div>
-                     <div class="animallist-description">
-                        <div class="animallist-name">Tom</div>
-                        <div class="animallist-type"><strong>Type</strong> Cat</div>
-                        <div class="animallist-breed"><strong>Breed</strong> Bombay cat</div>
-                     </div>
-                  </div>
-               </a>              
+                           
             </div>
          </div>
       </div>
       <footer data-role="footer">
          <ul>
             <li><a href="#map-page">Map</a></li>
-            <li><a href="#list-page">List</a></li>
+            <li><a href="#list-page" style="color:#512D99">List</a></li>
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
       </footer>
@@ -328,7 +339,7 @@
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>        
             <li class="flex-stretch"></li>
-            <!-- <li><a href="#animal-settings-page">Update</a></li>    -->         
+            <li><a href="#animal-settings-page">Edit</a></li>            
          </ul>
       </header>
       <div data-role="main">
@@ -339,18 +350,16 @@
             <div class="profile-edit">        
                <h2 id="profile-name">Tom</h2>
             </div>
-            <h5>Type: Cat / Breed: Bombay cat
+            <!-- <h5>Type: Cat / Breed: Bombay cat
                <br>Description: Arrogant, lazy, sensitive
-            </h5>
+            </h5> -->
          </div>
-         <div class="container">
-         <a href="#animal-settings-page" class="form-button ui-link">Editing</a>   
-         </div>       
+               
       </div>
       <footer data-role="footer">
          <ul>
             <li><a href="#map-page">Map</a></li>
-            <li><a href="#list-page">List</a></li>
+            <li><a href="#list-page" style="color:#512D99">List</a></li>
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
       </footer>       
@@ -397,32 +406,81 @@
 <!-- page 9: user profile-->
    <section data-role="page" id="user-profile-page">
       <header data-role="header">
-         <h1>Yihan's profile</h1>
+         <h1>Yi Han's profile</h1>
          <ul>  
-            <li><a href="#user-settings-page">Update</a></li>          
+            <!-- <li><a href="#user-settings-page">Update</a></li> -->          
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-logout">Logout</a></li>            
+            <li><a href="#user-settings-page" class="js-logout">Settings</a></li>            
          </ul>
       </header>
       <div data-role="main">
          <div class="user-profile-image">
             <img src="img/user.png" alt="">
          </div>
-         <div class="profile">
+         <h3 class="user-profile-name">Yi Han</h3>
+         <div class="user-profile-item">
+                     
+            <div class="user-profile-description">
+
+               <table border="0">
+                 <!-- <tr>
+                   <th>Yi Han</th>
+                  
+                 </tr> -->
+                 <tr>
+                   <td>
+                      Email:
+                   </td>
+                   <td>
+                     <div class="user-profile-context">yihan@art.edu</div>
+                   </td>
+                 </tr>
+
+                 <tr>
+                   <td>
+                     Location:
+                   </td>
+                   <td>
+                     <div class="user-profile-context">Canton</div>
+                   </td>
+                 </tr>
+
+                 <tr>
+                   <td>
+                     Animal Counts:
+                   </td>
+                   <td>
+                     <div class="user-profile-context">6</div>
+                   </td>
+                 </tr>
+               </table>
+               <!-- <div>
+                  <h3 id="profile-name">Yi Han</h2>
+                  <p>Edit</p>
+               </div>               
+               <div class="user-profile-email">Email:<strong>yihan@art.edu</strong></div>
+               <div class="user-profile-location">Location:<strong>Canton</strong></div>
+               <div class="user-profile-animal">Animal Counts:<strong>6</strong></div> -->
+            </div>
+         </div>
+      </div>
+
+         <!-- <div class="profile">
             <div class="profile-edit">        
                <h2 id="profile-name">Yi Han</h2>
             </div>
-            <h4>City: Canton, yihan@art.edu</h3>
+            <h4>yihan@art.edu</h3>
          </div>
          <div class="container">
-         <a href="#user-password-edit-page" class="form-button ui-link">Change Password</a>   
-         </div>       
-      </div>
+         <a href="#user-password-edit-page" class="ui-link">
+         Change Password</a>   
+         </div>  -->      
+      
       <footer data-role="footer">
          <ul>
-            <li><a href="#map-page">Map</a></li>
+            <li><a href="#map-page" >Map</a></li>
             <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#user-profile-page" style="color:#512D99">Profile</a></li>
          </ul>
       </footer>       
    </section>
@@ -447,7 +505,7 @@
       <form id="user-edit-form" data-ajax="false" style="padding:1em">
          <div class="form-control">
             <label for="user-edit-username" class="form-label">Username</label>
-            <input id="user-edit-username" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="Yihan">
+            <input id="user-edit-username" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="Yi Han">
          </div>
          <div class="form-control">
             <label for="user-edit-city" class="form-label">City</label>
@@ -458,6 +516,26 @@
             <input id="user-edit-email" type="text" class="form-input" data-role="none" placeholder="Type your user email" value="yihan@art.edu">
          </div>
       </form>
+
+      <hr id="user-settings-hr" >
+
+      <a href="#user-password-edit-page" class="change-password">
+         <h4>
+         Change Password
+         </h4>
+      </a>
+
+      <hr id="user-settings-hr">
+      
+      <a href="#" class="js-logout">
+         <h3 class="Logout">
+         Log out
+         </h3>
+      </a>
+      
+           
+
+
    </section>
 
 <!-- password-edit -->
