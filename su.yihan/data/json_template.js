@@ -1,14 +1,15 @@
 
 // USER TEMPLATE YOU SHOLD HAVE A COOLER ONE THIS WEEK
 // this semester: 3 table data (608: 1 table)
+// sort by id or date
 [
   '{{repeat(10)}}',
   {
     id:'{{index(1)}}',
-    name:'{{firstName()}} {{surname()}}',
     username: function(){
       return 'user'+this.id;
     },
+    gender: '{{gender()}}',
     email:function(){
       return this.username+'@gmail.com';
     },
@@ -17,7 +18,12 @@
       return 'https://via.placeholder.com/400/'+
         tags.integer(700,999)+'/fff/?text='+this.username;
     },
-    date_create: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd:mm:ss")}}'
+    date_create: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd:mm:ss")}}',
+
+    favoriteAnimal: function (tags) {
+      var animals = ['dog', 'cat', 'bird', 'fish'];
+      return animals[tags.integer(0, animals.length - 1)];
+    }
   }
 ]
 
@@ -31,18 +37,19 @@
     
     name:'{{company()}}',
     
-    type:'{{random("dog","horse","cat")}}',    
+    type:'{{random("dog","cat")}}',    
     breed:function(tags){
       var breeds = {
-        dog:["labrador","pitbull","dachsund"],
-        horse:["shetland","andalusian","unicorn"],
-        cat:["calico","ginger","tuxedo","siamese"]
+        dog:["Alaska Malamute","Corgi","American Eskimo Dog"],
+        cat:["Bombay cat","American Shorthair Cat","Birman Cat Breed"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);
-      return chose_type[chosen_index];
+      return chosen_type[chosen_index];
     },
     
+    health:'{{random("healthy","unhealthy")}}',
+
     description: '{{lorem(3,"sentences")}}',
     
     img:function(tags) {
@@ -53,6 +60,7 @@
   }
 ]
 
+
 // LOCATION
 [
   '{{repeat(150)}}',
@@ -60,8 +68,8 @@
     id:'{{index(1)}}',
     animal_id:'{{integer(1,10)}}',
     
-    lat:'{{floating(32.349383, 32.543252)}}',
-    lng:'{{floating(-120.345354,-120.432451)}}',
+    lat: '{{floating(23.168595, 23.073051)}}',
+    lng: '{{floating(113.289305, 113.422307)}}',
     
    
     description: '{{lorem(3,"sentences")}}',
@@ -75,6 +83,10 @@
   }
 ]
 
+
+
+
+// https://www.json-generator.com/
 [
   '{{repeat(5, 7)}}',
   {
