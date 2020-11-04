@@ -62,20 +62,28 @@ function makeStatement($data) {
 		case 'users_all':
 			return makeQuery($c,"SELECT * FROM `track_locations`",$p);
 
-	case 'users_by_id':
+		case 'users_by_id':
 			return makeQuery($c,"SELECT * FROM `track_users` WHERE `id`=?",$p);
 		case 'users_by_id':
 			return makeQuery($c,"SELECT * FROM `track_animals` WHERE `id`=?",$p);
 		case 'users_by_id':
 			return makeQuery($c,"SELECT * FROM `track_locations` WHERE `id`=?",$p);
 
-	case "animals_by_user_id":
-        return makeQuery($c,"SELECT * FROM `track_animals` WHERE `user_id`=?",$p);
-    case "locations_by_animal_id":
-        return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id`=?",$p);
-			
 
-    default: return ["error"=>"No Matched Type"];
+
+		case "animals_by_user_id":
+	        return makeQuery($c,"SELECT * FROM `track_animals` WHERE `user_id`=?",$p);
+	    case "locations_by_animal_id":
+	        return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id`=?",$p);
+
+
+
+        case 'check_signin':
+        	return makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? AND `password`=md5(?)",$p);
+        
+              	
+
+    	default: return ["error"=>"No Matched Type"];
 	}
 }
 
@@ -87,5 +95,5 @@ echo json_encode(
    JSON_NUMERIC_CHECK
 );
 
-$type = isset($_GET['type']) ? $_GET['type'] : '';
+// $type = isset($_GET['type']) ? $_GET['type'] : '';
 
