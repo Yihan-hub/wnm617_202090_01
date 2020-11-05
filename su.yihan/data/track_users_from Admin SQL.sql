@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost:3306
--- 生成日期： 2020-10-29 16:29:20
+-- 生成日期： 2020-11-05 13:11:36
 -- 服务器版本： 5.6.49-cll-lve
 -- PHP 版本： 7.3.6
 
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `tracker_users`
+-- 表的结构 `track_users`
 --
 
-CREATE TABLE `tracker_users` (
+CREATE TABLE `track_users` (
   `id` int(11) NOT NULL,
   `username` varchar(64) NOT NULL,
   `gender` varchar(10) NOT NULL,
@@ -40,10 +40,10 @@ CREATE TABLE `tracker_users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `tracker_users`
+-- 转存表中的数据 `track_users`
 --
 
-INSERT INTO `tracker_users` (`id`, `username`, `gender`, `email`, `password`, `img`, `date_create`, `favoriteAnimal`) VALUES
+INSERT INTO `track_users` (`id`, `username`, `gender`, `email`, `password`, `img`, `date_create`, `favoriteAnimal`) VALUES
 (1, 'user1', 'female', 'user1@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/743/fff/?text=user1', '2020-03-16 13:17:00', 'cat'),
 (2, 'user2', 'female', 'user2@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/705/fff/?text=user2', '2016-08-10 18:31:00', 'fish'),
 (3, 'user3', 'female', 'user3@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/748/fff/?text=user3', '0000-00-00 00:00:00', 'bird'),
@@ -60,10 +60,20 @@ INSERT INTO `tracker_users` (`id`, `username`, `gender`, `email`, `password`, `i
 --
 
 --
--- 表的索引 `tracker_users`
+-- 表的索引 `track_users`
 --
-ALTER TABLE `tracker_users`
+ALTER TABLE `track_users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- 在导出的表使用AUTO_INCREMENT
+--
+
+--
+-- 使用表AUTO_INCREMENT `track_users`
+--
+ALTER TABLE `track_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

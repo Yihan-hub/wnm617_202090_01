@@ -3,6 +3,11 @@
 
 
 
+
+
+
+
+
 $(()=>{
 
 
@@ -10,6 +15,18 @@ $(()=>{
 
    // event delegation
    $(document)
+
+   .on("pagecontainerbeforeshow",function(e,ui) {
+      // console.log(ui.toPage[0].id)
+
+      // Page Routing
+      switch(ui.toPage[0].id) {
+         case "recent-page": RecentPage(); break;
+         case "list-page": ListPage(); break;
+         case "user-profile-page": UserProfilePage(); break;
+         case "animal-profile-page": AnimalProfilePage(); break;
+      }
+   })
 
 
 
@@ -31,9 +48,14 @@ $(()=>{
       checkUserId();
    })
 
+   .on("click",'.js-animal-jump',function(e){
+      sessionStorage.animalId = $(this).data("id");
+      $.mobile.navigate('#animal-profile-page');
+   })
 
 
-// data-activate: click this, activate that, we can target ID or class
+
+
    .on('click','[data-activate]',function(e){
       let target = $(this).data('activate');
       $(target).addClass("active")
@@ -48,8 +70,3 @@ $(()=>{
    })
 
 })
-
-
-
-
-
