@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `tracker_animals` (
+CREATE TABLE IF NOT EXISTS `track_animals` (
 `id` INT NULL,
 `user_id` INT NULL,
 `name` VARCHAR(MAX) NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `tracker_animals` (
 `date_create` VARCHAR(MAX) NULL
 );
 
-INSERT INTO tracker_animals VALUES
+INSERT INTO track_animals VALUES
 (1,9,'Ziggles','dog','Alaska Malamute','unhealthy','Reprehenderit irure nostrud laborum Lorem ea laboris sunt et magna. Sint quis laboris culpa anim dolor ad qui commodo ut nulla. Ex irure ipsum labore laborum laboris proident ex anim occaecat ad.','https://via.placeholder.com/400/924/fff/?text=undefined','2020-08-06:27:41'),
 (2,7,'Steelfab','dog','Alaska Malamute','unhealthy','Dolor qui pariatur proident aute sint pariatur adipisicing mollit proident aute. Incididunt et sit adipisicing elit ea ex fugiat nulla non ut. Dolor laboris duis dolore dolore in laborum consequat ipsum dolore incididunt.','https://via.placeholder.com/400/747/fff/?text=undefined','2020-09-05:22:17'),
 (3,10,'Entogrok','dog','Alaska Malamute','unhealthy','Elit mollit nulla dolor incididunt qui sunt excepteur. Nulla amet culpa cupidatat consequat amet consequat velit non aliqua irure nulla et ea. Eiusmod enim proident irure dolor nisi.','https://via.placeholder.com/400/835/fff/?text=undefined','2020-05-01:05:21'),

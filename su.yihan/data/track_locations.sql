@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `tracker_locations` (
+CREATE TABLE IF NOT EXISTS `track_locations` (
 `id` INT NULL,
 `animal_id` INT NULL,
 `lat` FLOAT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `tracker_locations` (
 `date_create` VARCHAR(MAX) NULL
 );
 
-INSERT INTO tracker_locations VALUES
+INSERT INTO track_locations VALUES
 (1,8,23.20961,113.38272,'Ipsum voluptate consectetur voluptate proident commodo ut sit. Laboris Lorem qui exercitation nisi mollit labore dolore non. Velit sint dolor ipsum aliquip elit ullamco amet ea amet deserunt velit qui enim eu.','https://via.placeholder.com/400/','https://via.placeholder.com/100/?text=ICON','2020-04-15 01:09:43'),
 (2,4,23.47188,113.37075,'Nostrud et ea consectetur laborum ullamco. Ad proident magna sint ex tempor ullamco nulla et. Aliquip dolore velit laboris laborum duis fugiat culpa.','https://via.placeholder.com/400/','https://via.placeholder.com/100/?text=ICON','2020-01-11 11:10:08'),
 (3,14,23.24988,113.32041,'Sit ex laboris aliqua qui. Enim commodo eiusmod reprehenderit in irure labore sit cupidatat aliqua qui consequat sit adipisicing et. Aliqua incididunt eiusmod culpa deserunt do minim duis qui irure adipisicing deserunt sunt do.','https://via.placeholder.com/400/','https://via.placeholder.com/100/?text=ICON','2020-10-14 08:27:22'),
