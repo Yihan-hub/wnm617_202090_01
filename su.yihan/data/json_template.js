@@ -1,3 +1,6 @@
+// JSON GENERATOR-App Konbert (convert)-Export-phpMyAdmin (SQL) run and export-replace the .sql exported by App Konbert
+
+
 
 // USER TEMPLATE YOU SHOLD HAVE A COOLER ONE THIS WEEK
 // this semester: 3 table data (608: 1 table)
@@ -30,7 +33,7 @@
 
 // ANIMAL 
 [
-  '{{repeat(10)}}',
+  '{{repeat(50)}}',
   {
     id:'{{index(1)}}',
     user_id:'{{integer(1,11)}}',
@@ -62,37 +65,16 @@
 
 
 // LOCATION
+// ?photos NOT WORK in phpAdmin SQL
+
 [
   '{{repeat(150)}}',
   {
     id:'{{index(1)}}',
-    animal_id:'{{integer(1,10)}}',
-
-
-
-    lat: '{{floating(23.616360, 23.068729)}}',
-    lng: '{{floating(113.723650, 113.180392)}}',
-    
-   
-    description: '{{lorem(3,"sentences")}}',
-    
-    photos: [
-      '{{repeat(1,2)}}',
-      'https://via.placeholder.com/400/'],
-
-    date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd:mm:ss")}}'
-  }
-]
-
-
-[
-  '{{repeat(250)}}',
-  {
-    id:'{{index(1)}}',
     animal_id: '{{integer(1,50)}}',
     
-    lat:'{{floating(37.794021, 37.698960)}}',
-    lng:'{{floating(-122.510762, -122.386346)}}',
+    lat: '{{floating(23.616360, 23.068729)}}',
+    lng: '{{floating(113.723650, 113.180392)}}',
     
     description: '{{lorem(3,"sentences")}}',
     
@@ -103,7 +85,7 @@
      ],
     */
     photo: 'https://via.placeholder.com/400/',
-    icon: 'https://via.placeholder.com/100/?text=ICON',
+    // icon: 'https://via.placeholder.com/100/?text=ICON',
     date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
   }
 ]

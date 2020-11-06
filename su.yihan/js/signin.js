@@ -6,7 +6,7 @@ const makeWarning = (target,message) => {
    },2000);
 }
 
-const checkSigninForm = () => {
+const checkSigninForm =async () => {
    let user = $("#signin-username").val();
    let pass = $("#signin-password").val();
 
@@ -17,6 +17,9 @@ const checkSigninForm = () => {
 
    console.log(user,pass)
 
+// error in .js files could result in the index page's disappearance. 
+// eg.copy too much templaters in function file
+// eg. await should go with an async (line 9). Nov 6, 2020
    let found_user = await query({
       type:'check_signin',
       params:[user,pass]
@@ -51,6 +54,6 @@ const checkUserId = () => {
    } else {
       // logged in
       if(p.some(o=>window.location.hash===o))
-         $.mobile.navigate("#map-page");
+         $.mobile.navigate("#recent-page");
    }
 }

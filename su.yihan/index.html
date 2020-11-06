@@ -14,27 +14,17 @@
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
 <!-- always load library code before local code --> 
-   <script src="lib/js/jquery-2.2.4.min.js"></script>
-<!-- exception: JQuery Mobile wants to be loaded after our app js, to be loaded last  -->
-   <script src="js/app.js"></script>
-   <script src="js/signin.js"></script>
-   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-   <script src="js/functions.js"></script>
-   <script src="js/pages.js"></script>
-   <script src="js/parts.js"></script>
-
 
 <!-- lib change?? -->
-
-<!-- Hamilton's code -->
-   <!-- <script src="lib/js/jquery-2.2.4.min.js"></script>
+<!-- Hamilton's script -->
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
-   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script> -->
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
@@ -60,7 +50,7 @@
                <input type="submit" data-role="none" class="form-button" value="Sign In">
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Don't have an account? <a href="#signup-page" class="ui-link" style="color:#512D99">Sign Up</a>! <!-- <a href="#map-page">Skip</a> for the app can only be visit after signing in. ex. you can visit ins website, but not the app-->
+               Don't have an account? <a href="#signup-page" class="ui-link" style="color:#512D99">Sign Up</a>! <!-- <a href="#recent-page">Skip</a> for the app can only be visit after signing in. ex. you can visit ins website, but not the app-->
             </div>
          </form>
       </div>
@@ -114,7 +104,7 @@
       </div>
       <footer data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
          <ul>
-            <li><a href="#map-page" class="ui-link" style="color:#512D99">Map</a></li>
+            <li><a href="#recent-page" class="ui-link" style="color:#512D99">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
@@ -122,7 +112,7 @@
    </section>
 
 <!-- page 4: map-->
-   <section data-role="page" id="map-page">
+   <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="floater right top">
             <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
@@ -165,7 +155,7 @@
 
       <footer data-role="footer">
          <ul>
-            <li><a href="#map-page" class="ui-link" style="color:#512D99">Map</a></li>
+            <li><a href="#recent-page" class="ui-link" style="color:#512D99">Map</a></li>
             <li><a href="#list-page" class="ui-link">List</a></li>
             <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
          </ul>
@@ -310,7 +300,7 @@
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#map-page">Map</a></li>
+            <li><a href="#recent-page">Map</a></li>
             <li><a href="#list-page" style="color:#512D99">List</a></li>
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
@@ -400,7 +390,7 @@
 
       <footer data-role="footer">
          <ul>
-            <li><a href="#map-page">Map</a></li>
+            <li><a href="#recent-page">Map</a></li>
             <li><a href="#list-page" style="color:#512D99">List</a></li>
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
@@ -496,7 +486,7 @@
     
       <footer data-role="footer">
          <ul>
-            <li><a href="#map-page" >Map</a></li>
+            <li><a href="#recent-page" >Map</a></li>
             <li><a href="#list-page">List</a></li>
             <li><a href="#user-profile-page" style="color:#512D99">Profile</a></li>
          </ul>

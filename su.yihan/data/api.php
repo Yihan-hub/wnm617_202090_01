@@ -81,7 +81,16 @@ function makeStatement($data) {
         case 'check_signin':
         	return makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? AND `password`=md5(?)",$p);
         
-              	
+
+        case "recent_locations":
+        	return makeQuery($c,"SELECT * 
+        		FROM `track_animals` a
+        		RIGHT JOIN 'track_locations'
+        		ON a. id=l.animal_id
+        		WHERE a.`user_id`=? 
+        		",$p)
+        		
+
 
     	default: return ["error"=>"No Matched Type"];
 	}
@@ -95,5 +104,5 @@ echo json_encode(
    JSON_NUMERIC_CHECK
 );
 
-// $type = isset($_GET['type']) ? $_GET['type'] : '';
+// 
 
