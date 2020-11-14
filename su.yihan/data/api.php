@@ -1,42 +1,47 @@
 <?php
 
 
-function makeCorn() {
-	include_once "auth.php";
-	try {
-		$corn = new PDO(...Auth());
-		$corn->setAttribute(PDO::ATTR_ERRMODE,PDO::EERMODE_EXCEPTION);
-		return $conn;
-	} catch (PDOException $e) {
-		die('ERROR '.$e->getMessage());
-	}
+function makeConn() {
+   include_once "auth.php";
+   try {
+      $conn = new PDO(...Auth());
+      $conn->setAttribute(
+         PDO::ATTR_ERRMODE,
+         PDO::ERRMODE_EXCEPTION
+      );
+   } catch(PDOException $e) {
+      die('{"error":"'.$e->getMessage().'"}');
+   }
+   return $conn;
 }
 
+
 function fetchAll($r) {
-	$a = [];
-	while ($row =$r->fetch(PDO::FETCH_OBJ)) 
-		$a[] = $row;
-	return $a;
+   $a = [];
+   while($row = $r->fetch(PDO::FETCH_OBJ))
+      $a[] = $row;
+   return $a;
 }
 
 
 // connection, prepared statement, parameters
-function makeQuery($c,$ps,$p,$makeResults=ture) {
-	try{
-		$stmt = $c->prepare($ps);
+function makeQuery($c,$ps,$p,$makeResults=true) {
+   try {
+      if(count($p)) {
+         $stmt = $c->prepare($ps);
          $stmt->execute($p);
       } else {
          $stmt = $c->query($ps);
       }
 
-		$r = $makeResults ? fetchAll($stmt): [];
+      $r = $makeResults ? fetchAll($stmt) : [];
 
-		return [
-			"result"=>$r
-		];
+      return [
+         "result"=>$r
+      ];
 
-	} catch catch (PDOException $e) {
-		 return [
+   } catch(PDOException $e) {
+      return [
          "error"=>"Query Failed: ".$e->getMessage()
       ];
    }
@@ -49,52 +54,59 @@ function makeQuery($c,$ps,$p,$makeResults=ture) {
 
 
 
+
 function makeStatement($data) {
-	$c = makeCorn();
-	$t = $data->type;
-	$p = $data->params;
+   $c = makeConn();
+   $t = $data->type;
+   $p = $data->params;
 
-	switch ($t) {
-		case 'users_all':
-			return makeQuery($c,"SELECT * FROM `track_users`",$p);
-		case 'users_all':
-			return makeQuery($c,"SELECT * FROM `track_animals`",$p);
-		case 'users_all':
-			return makeQuery($c,"SELECT * FROM `track_locations`",$p);
+   switch($t) {
 
-		case 'users_by_id':
-			return makeQuery($c,"SELECT * FROM `track_users` WHERE `id`=?",$p);
-		case 'users_by_id':
-			return makeQuery($c,"SELECT * FROM `track_animals` WHERE `id`=?",$p);
-		case 'users_by_id':
-			return makeQuery($c,"SELECT * FROM `track_locations` WHERE `id`=?",$p);
+      case "users_all":
+         return makeQuery($c,"SELECT * FROM `track_users`",$p);
+      case "animals_all":
+         return makeQuery($c,"SELECT * FROM `track_animals`",$p);
+      case "locations_all":
+         return makeQuery($c,"SELECT * FROM `track_locations`",$p);
 
 
-
-		case "animals_by_user_id":
-	        return makeQuery($c,"SELECT * FROM `track_animals` WHERE `user_id`=?",$p);
-	    case "locations_by_animal_id":
-	        return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id`=?",$p);
-
-
-
-        case 'check_signin':
-        	return makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? AND `password`=md5(?)",$p);
-        
-
-        case "recent_locations":
-        	return makeQuery($c,"SELECT * 
-        		FROM `track_animals` a
-        		RIGHT JOIN 'track_locations'
-        		ON a. id=l.animal_id
-        		WHERE a.`user_id`=? 
-        		",$p)
-        		
+      case "user_by_id":
+         return makeQuery($c,"SELECT * FROM `track_users` WHERE `id`=?",$p);
+      case "animal_by_id":
+         return makeQuery($c,"SELECT * FROM `track_animals` WHERE `id`=?",$p);
+      case "location_by_id":
+         return makeQuery($c,"SELECT * FROM `track_locations` WHERE `id`=?",$p);
 
 
-    	default: return ["error"=>"No Matched Type"];
-	}
+      case "animals_by_user_id":
+         return makeQuery($c,"SELECT * FROM `track_animals` WHERE `user_id`=?",$p);
+      case "locations_by_animal_id":
+         return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id`=?",$p);
+
+// check signin
+
+      case "check_signin":
+         return makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? AND `password`=md5(?)",$p);
+
+
+      case "recent_locations":
+         return makeQuery($c,"SELECT *
+            FROM `track_animals` a
+            RIGHT JOIN (
+               SELECT * FROM `track_locations`
+               ORDER BY `date_create` DESC
+            ) l
+            ON a.id = l.animal_id
+            WHERE a.user_id=?
+            GROUP BY l.animal_id
+            ",$p);
+
+
+
+      default: return ["error"=>"No Matched Type"];
+   }
 }
+
 
 
 $data = json_decode(file_get_contents("php://input"));

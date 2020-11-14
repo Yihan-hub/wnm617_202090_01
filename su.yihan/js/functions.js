@@ -1,11 +1,11 @@
 
 const query = (options) => {
-	// Fetch is a Promise
-	return Fetch('data/api.php',{
-		method:'POST',
-		body:JSON.stringify(options),
-		headers:{'Content-Type':'application/json'}
-	}).then(d=>d.json())
+   // Fetch is a Promise
+   return fetch('data/api.php',{
+      method:'POST',
+      body:JSON.stringify(options),
+      headers:{'Content-Type':'application/json'}
+   }).then(d=>d.json())
 }
 
 
@@ -13,7 +13,7 @@ const query = (options) => {
 const templater = f => a =>
    (Array.isArray(a)?a:[a])
    .reduce((r,o,i,a)=>r+f(o,i,a),'');
-
+   
 // Nov 6
 const checkData = (exterior_check) => new Promise((resolve,reject)=>{
    let timeout = 0;
