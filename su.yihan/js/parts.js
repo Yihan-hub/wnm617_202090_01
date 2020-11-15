@@ -22,8 +22,13 @@ const makeUserProfile = templater(o=>`
    `);
 
 const makeAnimalProfile = templater(o=>`
+	<div class="animal-profile">
    <div class="animal-profile-image">
-      <img src="${o.img}" alt="">
-   </div>
-   <h2>${o.name}</h2>
+      	<img src="${o.img}" alt="">
+	</div>
+	<h2>${o.name}</h2>
+	<div>Type: ${o.type}</div>
+	<div>Breed: ${o.breed}</div>
+	<div><p>${o.description}</p></div>
+	</div>
    `);
