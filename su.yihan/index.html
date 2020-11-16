@@ -30,8 +30,16 @@
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
-   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxFlGCvrBiz53-c8WDpV4bryeCiEkdNdc" defer ></script>
- -->
+<!--    <script 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c" defer 
+   ></script> -->
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c"
+      defer
+    ></script>
+
+
+
 </head>
 
 </head>
@@ -121,13 +129,16 @@
    </section>
 
 <!-- page 4: map-->
+
    <section data-role="page" id="recent-page">
       <div data-role="main">
+         <div class="map"></div>
+
          <div class="floater right top">
             <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
 <!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->        
          </div>
-         <img src="img/map.png">
+         <!-- <img src="img/map.png"> -->
      
          <div class="modal" id="map-drawer">
             <!-- <div class="modal-back" data-deactivate="#map-drawer"></div> -->
@@ -448,6 +459,11 @@
       </div> -->
 
       <form id="user-edit-form" data-ajax="false" style="padding:1em">
+
+         <div class="user-profile-image">
+            <img src="img/user.png" alt="">
+         </div>
+
          <div class="form-control">
             <label for="user-edit-username" class="form-label">Username</label>
             <input id="user-edit-username" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="Yi Han">
@@ -461,11 +477,11 @@
             <input id="user-edit-email" type="text" class="form-input" data-role="none" placeholder="Type your user email" value="yihan@art.edu">
          </div>
       </form>
-
-      <hr id="user-settings-hr" >
+<!-- 
+      <hr id="user-settings-hr" > -->
 
       <div class="form-control">
-         <a href="##user-password-edit-page" class="form-button"> Change Password</a>               
+         <a href="##user-password-edit-page" class="form-button" style="width:87%"> Update</a>               
       </div>
 
       <a href="#user-password-edit-page" class="change-password">
@@ -474,12 +490,12 @@
          </h4>
       </a>
 
-      <hr id="user-settings-hr">
+<!--       <hr id="user-settings-hr"> -->
       
       <a href="#" class="js-logout">
-         <h3 class="Logout">
+         <h4 class="Logout">
          Log out
-         </h3>
+         </h4>
       </a>
       
            
