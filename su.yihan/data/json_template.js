@@ -44,7 +44,7 @@
     breed:function(tags){
       var breeds = {
         dog:["Alaska Malamute","Corgi","American Eskimo Dog"],
-        cat:["Bombay cat","American Shorthair Cat","Birman Cat Breed"]
+        cat:["Bombay cat","American Shorthair Cat","Birman Cat"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);

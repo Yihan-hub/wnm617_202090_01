@@ -10,7 +10,7 @@ const makeMap = async(target, center={lat:37.786231,lng:-122.399310}) => {
          "map",
          new google.maps.Map(map_el[0], {
             center: center,
-            zoom: 12,
+            zoom: 15,
             Styles:mapStyles,
             disableDefaultUI: true
          })
@@ -31,7 +31,7 @@ const makeMarkers = (map_el,map_locs) => {
    map_locs.forEach(o=>{
       let m = new google.maps.Marker({
          position:o,
-         map:map,
+         map:map,   
          icon:{
             url: o.icon,
             scaledSize: {
