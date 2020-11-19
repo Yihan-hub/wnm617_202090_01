@@ -1,7 +1,6 @@
 // Oct 1, 2020 modal, create a selector
 // update on Oct 29, 2020
 
-
 $(()=>{
 
 
@@ -20,7 +19,9 @@ $(()=>{
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
          case "user-profile-page": UserProfilePage(); break;
+         case "user-profile-edit-page": UserProfileEditPage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
+         case "animal-profile-edit-page": AnimalProfileEditPage(); break;
       }
    })
 

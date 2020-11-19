@@ -49,12 +49,6 @@ function makeQuery($c,$ps,$p,$makeResults=true) {
 
 
 
-
-
-
-
-
-
 function makeStatement($data) {
    $c = makeConn();
    $t = $data->type;
@@ -71,7 +65,7 @@ function makeStatement($data) {
 
 
       case "user_by_id":
-         return makeQuery($c,"SELECT * FROM `track_users` WHERE `id`=?",$p);
+         return makeQuery($c,"SELECT id,username,email,date_create,img FROM `track_users` WHERE `id`=?",$p);
       case "animal_by_id":
          return makeQuery($c,"SELECT * FROM `track_animals` WHERE `id`=?",$p);
       case "location_by_id":
@@ -82,6 +76,7 @@ function makeStatement($data) {
          return makeQuery($c,"SELECT * FROM `track_animals` WHERE `user_id`=?",$p);
       case "locations_by_animal_id":
          return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id`=?",$p);
+// Nov 18 the user profile is blank: inspect-network-api.php-preview: "name" undefined because my sql does not have "name" but "user name" only
 
 // check signin
 
@@ -115,6 +110,3 @@ echo json_encode(
    makeStatement($data),
    JSON_NUMERIC_CHECK
 );
-
-// 
-

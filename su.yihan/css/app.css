@@ -165,7 +165,8 @@ a {
 .ui-header,
 .ui-footer {
    flex: none;
-   height:var(--header-height);
+   /*height:var(--header-height);*/
+   height: 6em;
    line-height:var(--header-height);
    border-width:0;
    background-color:var(--color-white);
@@ -177,13 +178,17 @@ a {
 
 .ui-header .ui-title {
    margin:0;
-   padding:0;
+   /*padding:0;*/
    position:absolute;
    top:0;
    left:0;
+   /*NOV 18*/
+   /*width:35%;*/
    width:100%;
    text-align:center;
    z-index:1;
+   /*NOV 18*/
+   font-size: 1.5em; 
 }
 
 footer {
@@ -191,7 +196,12 @@ footer {
 }
 
 
+/*MAP MODAL*/
 
+div#modal {
+    height: 4em;
+
+}
 
 
 /* NAV */
@@ -252,7 +262,15 @@ footer {
   width: 100%;
   height: 100%;
 }
-
+/*？NOV 18*/
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: text-bottom;
+}
+.ui-header .icon {
+  vertical-align:middle;
+}
 
 
 /* MODAL */
@@ -405,46 +423,18 @@ footer {
 }
 
 
-
-
-
-
-/*profile*/
+/* Profile */
 .user-profile-image img {
-  width:calc(60vmin - 4em);
-  height:calc(60vmin - 4em);
-  /*height :calc(100vmin - 4em);  the space matters!!!*/
-  margin:4em 6em 2em 6em;;
-  border-radius:50%;
-  object-fit:cover;
-}
-/*after midterm*/
-h3.user-profile-name 
-h3.animal-profile-name {
-    text-align: center;
-    font-size: 1.5em;
-}
-.user-profile-item {
-    display: flex;
-    margin: 1em;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
-    border-radius: 1em;
-    overflow: hidden;
-    padding: 1em;
-}
-th {
-    font-size: 1.5em;
-}
-.user-profile-context {
-    font-size: 1.1em;
-    font-weight: bold;
+   width:calc(100vmin - 4em);
+   height:calc(100vmin - 4em);
+   margin:2em;
+   border-radius:50%;
+
+   object-fit:cover;
 }
 
 
-table {
-    border-spacing: 15px;
-}
+
 
 /*SETTINGS*/
 .settings-list {
@@ -499,6 +489,18 @@ table {
 .animallist-name {
    font-size:1.2em;
    padding-bottom: 0em;
+}
+
+
+
+/*NOV 18 CIRCLE BTN*/
+a#list-add {
+    /* padding: 1em 0em 4em 2em; */
+    padding-left: 1em;
+    padding-right: 1.4em;
+    padding-top: 1em;
+    padding-bottom: 0em;
+    color: #512D99;
 }
 
 
@@ -597,7 +599,7 @@ h3 {
     color: #A794D0;
 }
 a.change-password.ui-link {
-    margin-left: 1.5em;
+    margin-left: 1em;
     font-size: 0.9em;
     color: black;
 }
@@ -615,6 +617,9 @@ a.js-logout.ui-link {
 h4.Logout {
     margin-left: 1em;
 }
+a#update {
+    margin-left: auto;
+    margin-right: auto;
 
 /*animal profile*/
 .animal-profile-item {

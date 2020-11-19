@@ -145,7 +145,7 @@
             <div class="modal-drawer bottom">
             <!-- OR <div class="modal-drawer top"> ect. -->
                <!-- <div class="modal-head"> -->
-               <div class="modal-head" data-role="header">
+               <div id="modal" class="modal-head" data-role="header">
                   <h5>Add a Record</h5>
                <ul>   
                   <!-- <li><a href="#" data-rel="back"></a></li> -->
@@ -224,25 +224,34 @@
          <ul>
             <li class="flex-stretch"></li>
             <li>
-<!-- <a href="#animal-adding-page" data-activate="#animal-adding-page" class="ui-link">🞢</a> -->
-
+<!-- NOV 18 when I put the <a> after <ul> the link doesn't work 
+AND why the circle button does not work?? if i put it in the <li> it disappears-->
+  <a href="#animal-adding-page" data-activate="#animal-adding-page" class=" ui-link" id="list-add">.</a>
             </li>
          </ul>
+         <div class="floater right bottom">
+          
+
+            <a href="#animal-adding-page" data-activate="#animal-adding-page" class=" ui-link btn-circle" >&plus;</a>
+         </div>
+
+<!-- NOV 15 -->
+            
+<!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->        
+
+<!-- <a href="#animal-adding-page" data-activate="#animal-adding-page" class="ui-link">🞢</a> -->
       </header>
 
 <!-- Hamilton -->
       <div data-role="main">
          <div class="overscroll">
-<!-- NOV 15 -->
-            <div class="floater right bottom">
-               <a class="btn-circle "  href="#animal-adding-page">
-               <!-- <a href="#animal-adding-page"  class="ui-link"> -->&plus;<!-- </a> -->
-               </a>
-<!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->        
+        <!--  <div class="floater right bottom">
+            <a class="btn-circle "  href="#animal-adding-page">           
+            </a>
+         </div> -->
 
-<!-- <a href="#animal-adding-page" data-activate="#animal-adding-page" class="ui-link">🞢</a> -->
 
-            </div>
+            
 
             <div class="animallist"></div>
          </div>
@@ -392,71 +401,10 @@
 
 <!-- page 9: user profile-->
    <section data-role="page" id="user-profile-page">
-      <header data-role="header">
-         <h1>Yi Han's profile</h1>
-         <ul>  
-            <!-- <li><a href="#user-settings-page">Update</a></li> -->          
-            <li class="flex-stretch"></li>
-            <!-- <li><a href="#user-settings-page" class="js-logout">Settings</a></li>  js-logout makes the setting page logged out-->
-            <li><a href="#user-settings-page" style="color: #512D99; font-size: 1.5em;">✎</a></li>               
-         </ul>
-      </header>
       <div data-role="main">
-         <div class="user-profile-image">
-            <img src="img/user.png" alt="">
-         </div>
-         <h3 class="user-profile-name">Yi Han</h3>
-         <div class="user-profile-item">                   
-            <div class="user-profile-description">
-               <table border="0">
-                  <tr>
-                     <td>
-                        Favourtie Animal:
-                     </td>
-                     <td>
-                        <div class="user-profile-context">&#128054; Rubby</div>
-                     </td>
-                 </tr>
-
-                 <tr>
-                     <td>
-                        Animals tracked:
-                     </td>
-                     <td>
-                        <div class="user-profile-context">&#128054;&#128054;&#128049;</div>
-                     </td>
-                 </tr>
-                 
-                 <tr>
-                     <td>
-                        Animal Counts:
-                     </td>
-                     <td>
-                        <div class="user-profile-context">3</div>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>
-                        Email:
-                     </td>
-                     <td>
-                        <div class="user-profile-context">yihan@art.edu</div>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>
-                        Location:
-                     </td>
-                     <td>
-                        <div class="user-profile-context">Canton</div>
-                     </td>
-                 </tr>
-               </table>               
-            </div>
-         </div>
+         <div class="profile"></div>
       </div>
 
-    
       <footer data-role="footer">
          <ul>
             <li><a href="#recent-page" >Map</a></li>
@@ -473,7 +421,7 @@
          <ul>
             <li><a href="#" data-rel="back">&lsaquo;</a></li>
             <li class="flex-stretch"></li>
-            <!-- <li><a href="#" data-rel="back">Save</a></li> -->
+            <li><a href="#" data-rel="back">&#10003;</a></li>
          </ul>
       </header>
       <!-- <div data-role="main">
@@ -505,9 +453,9 @@
 <!-- 
       <hr id="user-settings-hr" > -->
 
-      <div class="form-control">
-         <a href="#" data-rel="back" class="form-button" style="width:87%"> Update</a>               
-      </div>
+      <!-- <div class="form-control">
+         <a href="#" data-rel="back" id="update" class="form-button" > Update</a>               
+      </div> -->
 
       <a href="#user-password-edit-page" class="change-password">
          <h4>

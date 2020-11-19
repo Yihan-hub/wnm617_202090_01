@@ -13,8 +13,8 @@ const query = (options) => {
 const templater = f => a =>
    (Array.isArray(a)?a:[a])
    .reduce((r,o,i,a)=>r+f(o,i,a),'');
-   
-// Nov 6
+
+
 const checkData = (exterior_check) => new Promise((resolve,reject)=>{
    let timeout = 0;
    const interior_check = () => {
