@@ -5,7 +5,11 @@ const ListPage = async() => {
 
    console.log(d);
 
-   $("#list-page .animallist").html(makeAnimalList(d.result))
+   $("#list-page .animallist").html(
+      d.result.length ?
+         makeAnimalList(d.result) :
+         "You need to add some animals."
+   )
 }
 
 
@@ -68,7 +72,7 @@ const UserProfilePage = async() => {
       .html(makeUserProfile(d.result))
 }
 
-const UserProfileEditPage = async() => {
+const UserEditPage = async() => {
    let d = await query({type:'user_by_id',params:[sessionStorage.userId]});
 
    console.log(d);

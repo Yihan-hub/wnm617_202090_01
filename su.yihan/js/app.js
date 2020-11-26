@@ -34,6 +34,11 @@ $(()=>{
       checkSigninForm();
    })
 
+   .on("submit","#signup-form",function(e){
+      e.preventDefault();
+      checkSignupForm();
+   })
+
 
 
 

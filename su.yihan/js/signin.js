@@ -50,11 +50,39 @@ const checkUserId = () => {
          $.mobile.navigate("#signin-page");
    } else {
       // logged in
-      if(p.some(o=>window.location.hash===o))
-         $.mobile.navigate("#recent-page");
+      if(p.some(o=>window.location.hash===o)) {
+         query({type:'animals_by_user_id',params:[sessionStorage.userId]})
+         .then(d=>{
+            if(d.result.length) $.mobile.navigate("#recent-page");
+            else $.mobile.navigate("#list-page");
+         })
+      }
    }
 }
 
 // error in .js files could result in the index page's disappearance. 
 // eg.copy too much templaters in function file
 // eg. await should go with an async (line 9). Nov 6, 2020
+
+const checkSignupForm = () => {
+   let username = $("#signup-username").val();
+   let email = $("#signup-email").val();
+   let password = $("#signup-password").val();
+   let passwordconfirm = $("#signup-password-confirm").val();
+
+   if(password!=passwordconfirm) {
+      throw "Passwords don't match";
+      return;
+   } else {
+      query({type:'insert_user',params:[username,email,password]})
+      .then(d=>{
+         if(d.error) {
+            throw d.error;
+         }
+         console.log(d.id);
+         $.mobile.navigate("#signin-page");
+      })
+   }
+}
+
+// Nov 19 H console.log(d.id) line82

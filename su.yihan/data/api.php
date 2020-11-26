@@ -97,6 +97,25 @@ function makeStatement($data) {
             ",$p);
 
 
+ // CRUD
+
+      case "insert_user":
+
+         // Check for duplicate users
+         $r = makeQuery("SELECT * FROM `track_users` WHERE `username`=? OR `email`=?",[$p[0],$p[1]]);
+         if(count($r['result'])) return ["error"=>"Username or Email already exists"];
+
+         // Create new user
+         $r = makeQuery($c,"INSERT INTO
+            `track_users`
+            (`username`,`email`,`password`,`img`,`date_create`)
+            VALUES
+            (?, ? , md5(?), 'https://via.placeholder.com/400?text=USER', NOW())
+            ",$p);
+         return ["id"=>$c->lastInsertId()];
+
+
+
 
       default: return ["error"=>"No Matched Type"];
    }
