@@ -97,12 +97,13 @@ function makeStatement($data) {
             ",$p);
 
 
- // CRUD
+     /* ----- CRUD ------ */
 
+      // INSERTS
       case "insert_user":
 
          // Check for duplicate users
-         $r = makeQuery("SELECT * FROM `track_users` WHERE `username`=? OR `email`=?",[$p[0],$p[1]]);
+         $r = makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? OR `email`=?",[$p[0],$p[1]]);
          if(count($r['result'])) return ["error"=>"Username or Email already exists"];
 
          // Create new user
@@ -110,9 +111,67 @@ function makeStatement($data) {
             `track_users`
             (`username`,`email`,`password`,`img`,`date_create`)
             VALUES
-            (?, ? , md5(?), 'https://via.placeholder.com/400?text=USER', NOW())
+            (?, ?, md5(?), 'https://via.placeholder.com/400?text=USER', NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
+
+      case "insert_animal":
+         $r = makeQuery($c,"INSERT INTO
+            `track_animals`
+            (`user_id`,`name`,`type`,`breed`,`description`,`img`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, ?, 'https://via.placeholder.com/400?text=ANIMAL', NOW())
+            ",$p);
+         return ["id"=>$c->lastInsertId()];
+
+      case "insert_location":
+         $r = makeQuery($c,"INSERT INTO
+            `track_locations`
+            (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
+            ",$p);
+         return [
+            "r"=>$r,
+            "p"=>$p,
+            "id"=>$c->lastInsertId()];
+
+
+
+      // UPDATE
+
+      case "update_user":
+         $r = makeQuery($c,"UPDATE
+            `track_users`
+            SET
+            `username` = ?,
+            `name` = ?,
+            `email` = ?
+            WHERE `id` = ?
+            ",$p,false);
+         return ["result"=>"success"];
+
+      case "update_animal":
+         $r = makeQuery($c,"UPDATE
+            `track_animals`
+            SET
+            `name` = ?,
+            `type` = ?,
+            `breed` = ?,
+            `description` = ?
+            WHERE `id` = ?
+            ",$p,false);
+         return ["result"=>"success"];
+
+
+      // DELETE
+
+      case "delete_animal":
+         return makeQuery($c,"DELETE FROM `track_animals` WHERE `id`=?",$p,false);
+
+      case "delete_location":
+         return makeQuery($c,"DELETE FROM `track_locations` WHERE `id`=?",$p,false);
+
 
 
 
