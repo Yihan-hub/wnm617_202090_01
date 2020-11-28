@@ -538,6 +538,11 @@ a#list-add {
     overflow:auto;
 }
 
+/*NOV 12 NOV 28*/
+.animal-image img {
+  width: 80px;
+}
+
 
 .animal-profile {
   padding:1em;
@@ -547,6 +552,7 @@ a#list-add {
   height:30vw;
   object-fit:cover;
 }
+
 
 
 
