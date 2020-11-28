@@ -539,10 +539,17 @@ a#list-add {
 }
 
 /*NOV 12 NOV 28*/
-.animal-image img {
+.animal-popup img {
   width: 80px;
 }
 
+.animal-popup h2 {
+  margin: 0;
+}
+
+.animal-popup-description {
+  padding: 1em
+}
 
 .animal-profile {
   padding:1em;
