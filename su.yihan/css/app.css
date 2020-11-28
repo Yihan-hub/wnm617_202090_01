@@ -426,6 +426,20 @@ div#modal {
 }
 
 
+
+
+.modal-close-floater {
+    position: absolute;
+}
+.modal-close-floater.right {
+  right:1em;
+}
+.modal-close-floater.top {
+  top:-1em;
+  transform: translateY(-100%);
+}
+
+
 /* Profile */
 .user-profile-image img {
    width:calc(100vmin - 4em);
