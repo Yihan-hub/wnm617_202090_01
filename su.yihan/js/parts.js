@@ -91,7 +91,9 @@ ${FormControl({
 
 
 
-const makeAnimalProfileUpdateForm = o => `
+
+
+const makeAnimalEditForm = o => `
 <!--<div class="user-profile-image">
    <img src="${o.img}">
 </div>-->

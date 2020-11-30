@@ -16,15 +16,19 @@ $(()=>{
 
       // Page Routing
       switch(ui.toPage[0].id) {
+
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
+
          case "user-profile-page": UserProfilePage(); break;
          case "user-edit-page": UserEditPage(); break;
+
          case "animal-profile-page": AnimalProfilePage(); break;
-         case "animal-profile-edit-page": AnimalProfileEditPage(); break;
+         case "animal-edit-page": AnimalEditPage(); break;
+
+         case "location-add-page": LocationAddPage(); break;
       }
    })
-
 
 
    // FORM SUBMITS
