@@ -33,7 +33,7 @@ const makeAnimalProfile = templater(o=>`
    <div><p>${o.description}</p></div>
 </div>`);
 
-
+// NOV 12 Animal popup on recent page, linking to Animal profile
 const makeAnimalPopup = o => `
 <div class="display-flex animal-popup" style="flex-wrap:wrap">
    <div class="flex-none">
@@ -52,7 +52,7 @@ const makeAnimalPopup = o => `
 
 
 
-
+// NOV 12
 
 const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
    return `<div class="form-control">
@@ -61,7 +61,7 @@ const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
    </div>`;
 }
 
-const makeUserProfileUpdateForm = o => `
+const makeUserEditForm = o => `
 ${FormControl({
    namespace:'user-edit',
    name:'username',
