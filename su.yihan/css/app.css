@@ -551,6 +551,15 @@ a#list-add {
   padding: 1em
 }
 
+
+
+#recent-drawer .modal-drawer {
+  margin: 1em;
+  width: calc(100% - 2em);
+}
+
+
+
 .animal-profile {
   padding:1em;
 }
@@ -559,6 +568,8 @@ a#list-add {
   height:30vw;
   object-fit:cover;
 }
+
+
 
 
 
