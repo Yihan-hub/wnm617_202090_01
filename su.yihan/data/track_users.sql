@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 05, 2020 at 06:21 PM
+-- Generation Time: Dec 02, 2020 at 10:03 PM
 -- Server version: 5.6.49-cll-lve
 -- PHP Version: 7.3.6
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `track_users` (
   `id` int(11) NOT NULL,
+  `name` varchar(10) NOT NULL,
   `username` varchar(64) NOT NULL,
-  `gender` varchar(10) NOT NULL,
   `email` varchar(128) NOT NULL,
   `password` varchar(64) NOT NULL,
   `img` varchar(256) NOT NULL,
@@ -43,17 +43,17 @@ CREATE TABLE `track_users` (
 -- Dumping data for table `track_users`
 --
 
-INSERT INTO `track_users` (`id`, `username`, `gender`, `email`, `password`, `img`, `date_create`, `favoriteAnimal`) VALUES
-(1, 'user1', 'female', 'user1@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/743/fff/?text=user1', '2020-03-16 13:17:00', 'cat'),
-(2, 'user2', 'female', 'user2@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/705/fff/?text=user2', '2016-08-10 18:31:00', 'fish'),
-(3, 'user3', 'female', 'user3@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/748/fff/?text=user3', '0000-00-00 00:00:00', 'bird'),
-(4, 'user4', 'female', 'user4@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/725/fff/?text=user4', '0000-00-00 00:00:00', 'fish'),
-(5, 'user5', 'female', 'user5@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/862/fff/?text=user5', '0000-00-00 00:00:00', 'cat'),
-(6, 'user6', 'female', 'user6@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/891/fff/?text=user6', '0000-00-00 00:00:00', 'bird'),
-(7, 'user7', 'female', 'user7@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/792/fff/?text=user7', '2018-10-13 06:19:00', 'bird'),
-(8, 'user8', 'female', 'user8@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/876/fff/?text=user8', '0000-00-00 00:00:00', 'fish'),
-(9, 'user9', 'female', 'user9@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/818/fff/?text=user9', '2019-10-02 13:31:00', 'bird'),
-(10, 'user10', 'female', 'user10@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/827/fff/?text=user10', '2016-08-28 07:43:00', 'dog');
+INSERT INTO `track_users` (`id`, `name`, `username`, `email`, `password`, `img`, `date_create`, `favoriteAnimal`) VALUES
+(1, 'Marva Litt', 'user1', 'user1@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/726/fff/?text=user1', '2020-01-21 09:58:56', 'cat'),
+(2, 'Luann Rush', 'user2', 'user2@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/763/fff/?text=user2', '2020-11-18 04:57:35', 'fish'),
+(3, 'Hardy Fros', 'user3', 'user3@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/769/fff/?text=user3', '2020-08-21 07:00:31', 'fish'),
+(4, 'Olson Blai', 'user4', 'user4@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/798/fff/?text=user4', '2020-08-11 12:39:30', 'bird'),
+(5, 'Lara Whita', 'user5', 'user5@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/774/fff/?text=user5', '2020-03-17 08:44:28', 'fish'),
+(6, 'Carolina T', 'user6', 'user6@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/802/fff/?text=user6', '2020-05-11 06:38:11', 'fish'),
+(7, 'Sheena Eat', 'user7', 'user7@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/777/fff/?text=user7', '2020-11-04 09:18:18', 'cat'),
+(8, 'Ortega Wea', 'user8', 'user8@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/913/fff/?text=user8', '2020-08-25 10:53:08', 'bird'),
+(9, 'Jodi Carey', 'user9', 'user9@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/968/fff/?text=user9', '2020-10-13 01:19:53', 'fish'),
+(10, 'Blanchard ', 'user10', 'user10@gmail.com', 'md5(pass)', 'https://via.placeholder.com/400/902/fff/?text=user10', '2020-03-10 10:29:52', 'fish');
 
 --
 -- Indexes for dumped tables

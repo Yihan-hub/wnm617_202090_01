@@ -59,10 +59,6 @@ const RecentPage = async() => {
 }
 
 
-
-
-
-
 const UserProfilePage = async() => {
    let d = await query({type:'user_by_id',params:[sessionStorage.userId]});
 
@@ -72,13 +68,13 @@ const UserProfilePage = async() => {
       .html(makeUserProfile(d.result))
 }
 
-const UserEditPage = async() => {
+const UserProfileEditPage = async() => {
    let d = await query({type:'user_by_id',params:[sessionStorage.userId]});
 
    console.log(d);
 
    $("#user-edit-form")
-      .html(makeUserEditForm(d.result[0]))
+      .html(makeUserProfileUpdateForm(d.result[0]))
 }
 
 

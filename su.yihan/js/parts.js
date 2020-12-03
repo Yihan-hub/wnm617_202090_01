@@ -52,7 +52,10 @@ const makeAnimalPopup = o => `
 
 
 
-// NOV 12
+
+
+
+
 
 const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
    return `<div class="form-control">
@@ -61,7 +64,10 @@ const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
    </div>`;
 }
 
-const makeUserEditForm = o => `
+
+
+
+const makeUserProfileUpdateForm = o => `
 ${FormControl({
    namespace:'user-edit',
    name:'username',

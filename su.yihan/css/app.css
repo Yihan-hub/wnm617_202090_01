@@ -9,10 +9,10 @@
    --font-serif:Georgia, serif;
 
    --color-neutral-lighter:#f0f0f1;
-   --color-neutral-light:#A794D0;/*#e0e0e5;*/
+   --color-neutral-light:#e0e0e5; /*#A794D0;*/
    --color-neutral-mediumer:#94949b;
-   --color-neutral-medium:#707070;/*#83838f;*/
-   --color-neutral-dark:#3F3E3E;/*#30304e;*/
+   --color-neutral-medium:#83838f;/* #707070;*/
+   --color-neutral-dark:#30304e; /*#3F3E3E;*/
 
     --color-main-light: #FFFFFF; /*#d5fffe;*/
     --color-main-medium: #AEAEAE; /*#1acfc8;*/
@@ -43,7 +43,12 @@ h6 {
    font-family: 'Roboto Slab', serif;
 }
 
-
+/*Dec 1*/
+header {
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
 
 
 a {
@@ -196,6 +201,8 @@ input.form-button.signin {
 
 footer {
     font-size: 0.5em;
+    border-radius: 27px;
+    margin: 10px;
 }
 
 
@@ -409,6 +416,14 @@ div#modal {
 .floater.bottom { bottom: 1em; }
 
 
+/* FLOATER-FOOTER */
+.floater {position: absolute;}
+.floater.right { right: 1em; }
+.floater.left { left: 1em; }
+.floater.top { top: 1em; }
+.floater.bottom { bottom: 1em; }
+
+
 
 
 /* CIRCLE */
@@ -517,7 +532,7 @@ a#list-add {
     padding-right: 1.4em;
     padding-top: 1em;
     padding-bottom: 0em;
-    color: #512D99;
+    color: white;
 }
 
 
@@ -627,8 +642,8 @@ a.profile-ui-link {
 }
 
 p {
-    margin-block-start: 6em;
-    margin-left: 2em;
+    margin-block-start: 1em;
+    /*margin-left: 1em;*/
     margin-right: 2em;
 }
 
