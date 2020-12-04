@@ -1,6 +1,6 @@
 
 
-const checkAnimalAddForm = () => {
+/*const checkAnimalAddForm = () => {
    let name = $("#animal-add-name").val();
    let type = $("#animal-add-type").val();
    let breed = $("#animal-add-breed").val();
@@ -16,10 +16,11 @@ const checkAnimalAddForm = () => {
             throw d.error;
          }
          console.log(d);
+          // console.log(d.id);
          $.mobile.navigate("#signin-page");
       })
    }
-}
+}*/
 
 const checkUserEditForm = () => {
    let username = $("#user-edit-username").val();
@@ -41,7 +42,7 @@ const checkUserEditForm = () => {
 
 const checkAnimalAddForm = () => {
    let name = $("#animal-add-name").val();
-   // let type = $("#animal-add-type").val();
+   let type = $("#animal-add-type").val();
    let breed = $("#animal-add-breed").val();
    let description = $("#animal-add-description").val();
 
@@ -122,4 +123,38 @@ const checkAnimalDelete = id => {
       }
       window.history.back();
    })
+}
+
+
+
+
+
+const checkSearchForm = async() => {
+   let s = $("#list-search-input").val()
+   console.log(s);
+
+   let r = await query({
+      type:"search_animals",
+      params:[s,sessionStorage.userId]
+   })
+
+   drawAnimalList(r.result,"Search produced no results.");
+
+   console.log(r)
+}
+
+
+
+const checkListFilter = async ({field,value}) => {
+   let r = value=="" ?
+      await query({
+         type:'animals_by_user_id',
+         params:[sessionStorage.userId]
+      }) :
+      await query({
+         type:'filter_animals',
+         params:[field,value,sessionStorage.userId]
+      });
+
+   drawAnimalList(r.result,"Search produced no results.");
 }

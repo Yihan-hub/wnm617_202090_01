@@ -44,6 +44,32 @@ $(()=>{
    })
 
 
+// FORM SUBMIT CLICKS
+
+   .on("click",'.js-user-edit',function(e){
+      checkUserEditForm();
+   })
+   .on("click",'.js-animal-add',function(e){
+      checkAnimalAddForm();
+   })
+   .on("click",'.js-animal-edit',function(e){
+      checkAnimalEditForm();
+   })
+   .on("click",'.js-location-add',function(e){
+      checkLocationAddForm();
+   })
+
+
+   
+
+.on("click",".filter",function(){
+      checkListFilter($(this).data());
+   })
+   .on("change",".image-uploader input",function(){
+      checkUpload(this.files[0])
+   })
+
+
 
 
 

@@ -131,7 +131,7 @@ a {
     width: 100%;
     display: inline-block;
     border-width: 0;
-    background-color: var(--color-main-dark);
+    background-color: #09489C/*var(--color-main-dark)*/;
     padding: 0.5em 1em;
     border-radius: 1.2em;
     font: inherit;
@@ -143,6 +143,34 @@ a {
    text-decoration:none;
    cursor:pointer;
 }
+
+
+
+/*DEC 3*/
+.hotdog {
+   width: 100%;
+   display: inline-flex;
+   background-color: var(--color-neutral-light);
+   padding: 0.5em 1em;
+   border-radius: 2em;
+   line-height:1;
+}
+[data-role="header"]>.hotdog {
+   padding:0 1em;
+}
+.hotdog>input {
+   flex:1;
+   border-width:0;
+   border-radius:0;
+   background-color:transparent;
+   font:inherit;
+   color:inherit;
+   outline:0;
+   padding:0;
+}
+
+
+
 
 /*Nov 24*/
 input.form-button.signin {
@@ -428,7 +456,7 @@ div#modal {
 
 /* CIRCLE */
 .btn-circle {
-   background-color:#512d99/*var(--color-white)*/;
+   background-color:#1e5452/*var(--color-white)*/;
    color: white;
    width:4rem;
    height:4rem;
@@ -437,6 +465,8 @@ div#modal {
    font-size:3.5em;
    border-radius:2em;
    box-shadow:2px 2px 5px rgba(0,0,0,0.15);
+
+       display: inline-block; /*VIP for the button shape*/
 
 }
 
@@ -702,4 +732,16 @@ th {
   margin:4em 6em 2em 6em;;
   border-radius:28%;
   object-fit:cover;
+}
+
+
+.filter-list {
+    display: flex;
+    overflow: auto;
+}
+
+.filter {
+    padding: 0 0.5em;
+    font-weight: bold;
+    cursor:pointer;
 }

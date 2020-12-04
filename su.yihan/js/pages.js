@@ -5,11 +5,9 @@ const ListPage = async() => {
 
    console.log(d);
 
-   $("#list-page .animallist").html(
-      d.result.length ?
-         makeAnimalList(d.result) :
-         "You need to add some animals."
-   )
+   $("#list-page .filter-list").html(makeFilterList(d.result));
+
+   drawAnimalList(d.result);
 }
 
 
