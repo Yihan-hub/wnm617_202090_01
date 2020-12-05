@@ -11,6 +11,7 @@ const ListPage = async() => {
 }
 
 
+// ? Nov 5
 
 
 
@@ -66,13 +67,13 @@ const UserProfilePage = async() => {
       .html(makeUserProfile(d.result))
 }
 
-const UserProfileEditPage = async() => {
+const UserEditPage = async() => {
    let d = await query({type:'user_by_id',params:[sessionStorage.userId]});
 
    console.log(d);
 
    $("#user-edit-form")
-      .html(makeUserProfileUpdateForm(d.result[0]))
+      .html(makeUserEditForm(d.result[0]))
 }
 
 

@@ -65,9 +65,9 @@ const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
 }
 
 
+// break it down
 
-
-const makeUserProfileUpdateForm = o => `
+const makeUserEditForm = o => `
 ${FormControl({
    namespace:'user-edit',
    name:'username',

@@ -43,7 +43,6 @@
    <script src="js/app.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-
 <!--    <script 
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c" defer 
    ></script> -->
@@ -51,8 +50,16 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c"
       defer
     ></script>
-
 </head>
+
+
+
+
+
+
+
+
+
 <body>
 
 <!-- page 1: sign-in -->
@@ -88,6 +95,8 @@
          </div>
       </div>
    </section>
+
+
 
 
 
@@ -149,11 +158,6 @@
 
 
 
-
-
-
-
-
 <!-- page 3: map-none-page-->
 
    <section data-role="page" id="map-none-page" >
@@ -184,6 +188,9 @@
 
 
 
+
+
+
 <!-- page 4: map-->
 
    <section data-role="page" id="recent-page">
@@ -195,12 +202,10 @@
          </div>
       </header>
 
-
-
       <div data-role="main">
          <div class="map"></div>
 
-         <div class="floater right top">
+         <div class="floater right bottom">
             <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
 <!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->        
          </div>
@@ -233,6 +238,8 @@
                   <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Or type the location">   
                   <!-- <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Or type the location" value="Alta Plaza Park">   -->       
                   
+
+
                   
 <!-- data-toggle="#map-drawer" -->
                   <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
@@ -250,6 +257,8 @@
          </ul>
       </footer>
    </section>
+
+
 
 
 
@@ -316,7 +325,6 @@
             <input type="search" id="list-search-input" data-role="none" placeholder="Search">
          </form>
 
-
          <!-- <h1>Animals</h1>
          <ul>
             <li class="flex-stretch"></li>
@@ -368,6 +376,8 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
       </footer>
 <!-- Q: after I copy&paste the following to the recent page, it doesn't work anymore 
         can i use php?-->
+
+
 
 
       <div class="modal" id="animal-add-animal">
@@ -557,16 +567,48 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
 
 
 
+<!-- Hamilton     user setting & user-edit    -->
+
+   <section data-role="page" id="user-settings-page">
+      <header data-role="header">
+         <h1>User Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <ul class="settings-list">
+            <li><a href="#user-edit-page">Update Profile</a></li>
+            <li><a href="#user-password-page">Change Password</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div>
+   </section>
 
 
-
+   <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+         <h1>User Info</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-user-edit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="overscroll">
+            <form id="user-edit-form" data-ajax="false" style="padding:1em">
+            </form>
+         </div>
+      </div>
+   </section>
 
 
 
 
 
 <!-- page 10: user setting -->
-   <section data-role="page" id="user-settings-page">
+  <!--  <section data-role="page" id="user-edit-page">
       <header data-role="header">
          <h1>User Settings</h1>
          <ul>
@@ -575,12 +617,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
             <li><a href="#" data-rel="back">&#10003;</a></li>
          </ul>
       </header>
-      <!-- <div data-role="main">
-         <ul class="settings-list">
-            <li><a href="#user-profile-edit-page">Update Profile</a></li>
-            <li><a href="#" class="js-logout">Logout</a></li>
-         </ul>
-      </div> -->
+
 
       <div data-role="main">
          <div class="overscroll">
@@ -589,7 +626,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
          </div>
       </div>
 
-      <!-- <form id="user-edit-form" data-ajax="false" style="padding:1em">
+      <form id="user-edit-form" data-ajax="false" style="padding:1em">
 
          <div class="user-profile-image">
             <img src="img/user.png" alt="">
@@ -607,32 +644,15 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
             <label for="user-edit-email" class="form-label">Email</label>
             <input id="user-edit-email" type="text" class="form-input" data-role="none" placeholder="Type your user email" value="yihan@art.edu">
          </div>
-      </form> -->
-<!-- 
-      <hr id="user-settings-hr" > -->
-
-      <!-- <div class="form-control">
-         <a href="#" data-rel="back" id="update" class="form-button" > Update</a>               
-      </div> -->
+      </form>
 
       <a href="#user-password-edit-page" class="change-password">
-         <h4>
-         Change Password
-         </h4>
+         <h4>Change Password</h4>
       </a>
-
-<!--       <hr id="user-settings-hr"> -->
-      
       <a href="#" class="js-logout">
-         <h4 class="Logout">
-         Log out
-         </h4>
-      </a>
-      
-           
-
-
-   </section>
+         <h4 class="Logout">Log out</h4>
+      </a>   
+   </section> -->
 
 
 
