@@ -430,7 +430,8 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
             <li class="flex-stretch"></li>
             <!-- <li><a href="#animal-settings-page" style="color: #512D99; font-size: 1.5em;"> &#9998;</a></li> -->
 <!-- NOV 30 -->
-            <li><a href="#animal-edit-page" style="color: #512D99; font-size: 1.5em;"> &#9998;</a></li>            
+            <li><a href="#animal-edit-page" style="color: #512D99; font-size: 1.5em;"> &#9998;</a></li>
+
          </ul>
       </header>
 <!-- Hamilton -->
@@ -499,15 +500,23 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
 
 <!-- animal setting -->
 
-   <section data-role="page" id="animal-settings-page">
+   <section data-role="page" id="animal-edit-page">
       <header data-role="header">
          <h1>Animal Settings</h1>
          <ul>
             <li><a href="#" data-rel="back">&lsaquo;</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="back">&#10003;</a></li>
+            <!-- <li><a href="#" data-rel="back">&#10003;</a></li> -->
+            <li><a href="#" class="js-animal-edit">Save</a></li>
          </ul>
       </header>
+
+      <div data-role="main">
+         <div class="overscroll">
+            <form id="animal-edit-form" data-ajax="false" style="padding:1em">
+            </form>
+         </div>
+      </div>
       <!-- <div data-role="main">
          <ul class="settings-list">
             <li><a href="#user-profile-edit-page">Update Profile</a></li>
@@ -515,7 +524,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
          </ul>
       </div> -->
 
-      <form id="animal-edit-form" data-ajax="false" style="padding:1em">
+      <!-- <form id="animal-edit-form" data-ajax="false" style="padding:1em">
             <div class="form-control">
                <label for="animal-edit-username" class="form-label">Animal name</label>
                <input id="animal-edit-username" type="text" class="form-input" data-role="none" placeholder="Type the animal name" value="Tom">
@@ -532,7 +541,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
                <label for="animal-edit-description" class="form-label">Description</label>
                <input id="animal-edit-description" type="text" class="form-input" data-role="none" placeholder="Type the animal descripton such as arrogant, lazy, sensitive, ect,." value="Arrogant, lazy, sensitive">
             </div>
-         </form>     
+         </form>      -->
       </section>
 
 
@@ -549,6 +558,11 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
 
 <!-- page 9: user profile-->
    <section data-role="page" id="user-profile-page">
+      <header>
+         <li></li>
+      </header>
+
+
       <div data-role="main">
          <div class="profile"></div>
       </div>
@@ -578,9 +592,15 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
       </header>
       <div data-role="main">
          <ul class="settings-list">
-            <li><a href="#user-edit-page">Update Profile</a></li>
-            <li><a href="#user-password-page">Change Password</a></li>
-            <li><a href="#" class="js-logout">Logout</a></li>
+            <li><a href="#user-edit-page">
+               <img src="img/icon/edit.svg" alt="" class="icon">
+
+            Update Profile</a></li>
+            <li><a href="#user-password-page">
+                  <img src="img/icon/key.svg" alt="" class="icon">Change Password</a></li>
+            <li><a href="#" class="js-logout">
+               <img src="img/icon/logout.svg" alt="" class="icon">
+            Logout</a></li>
          </ul>
       </div>
    </section>
@@ -672,7 +692,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
 
 <!-- password-edit -->
 
-   <section data-role="page" id="user-password-edit-page">
+   <section data-role="page" id="user-password-page">
       <header data-role="header">
          <h1>Change Password</h1>
          <ul>

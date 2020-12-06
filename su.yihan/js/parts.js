@@ -19,7 +19,7 @@ const makeUserProfile = templater(o=>`
    </div>
    <h2>${o.name}</h2>
    <h3>@${o.username}</h3>
-   <div><a href="#user-settings-page">Settings</a></div>
+   <div class"floater top right" style=""><a href="#user-settings-page">setting &utdot;</a></div>
    `);
 
 const makeAnimalProfile = templater(o=>`
