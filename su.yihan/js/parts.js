@@ -31,7 +31,6 @@ const makeAnimalProfile = templater(o=>`
    <div>Type ${o.type}</div>
    <div>Breed ${o.breed}</div>
    <div><p>${o.description}</p></div>
-    <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
 
 // NOV 12 Animal popup on recent page, linking to Animal profile
