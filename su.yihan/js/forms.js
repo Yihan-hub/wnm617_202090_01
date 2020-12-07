@@ -22,6 +22,28 @@
    }
 }*/
 
+const checkSignupForm = () => {
+   let username = $("#signup-username").val();
+   let email = $("#signup-email").val();
+   let password = $("#signup-password").val();
+   let passwordconfirm = $("#signup-password-confirm").val();
+
+   if(password!=passwordconfirm) {
+      throw "Passwords don't match";
+      return;
+   } else {
+      query({type:'insert_user',params:[username,email,password]})
+      .then(d=>{
+         if(d.error) {
+            throw d.error;
+         }
+         console.log(d);
+         $.mobile.navigate("#signin-page");
+      })
+   }
+}
+
+
 const checkUserEditForm = () => {
    let username = $("#user-edit-username").val();
    let name = $("#user-edit-name").val();
