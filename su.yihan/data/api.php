@@ -127,7 +127,7 @@ function makeStatement($data) {
 
 
 
-     /* ----- CRUD ------Nov 19 in class */
+ /* ----- CRUD ------ */
 
       // INSERTS
       case "insert_user":

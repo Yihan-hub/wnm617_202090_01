@@ -120,8 +120,8 @@
             </div>
 
             <div class="form-control">
-               <label for="signup-contact info" class="form-label">Email</label>
-               <input id="signup-contact info" type="contact info" class="form-input" data-role="none" placeholder="Type your Email">
+               <label for="signup-email" class="form-label">Email</label>
+               <input id="signup-email" type="contact info" class="form-input" data-role="none" placeholder="Type your Email">
             </div>
 
             <div class="form-control">
@@ -593,9 +593,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
       <div data-role="main">
          <ul class="settings-list">
             <li><a href="#user-edit-page">
-               <img src="img/icon/edit.svg" alt="" class="icon">
-
-            Update Profile</a></li>
+               <img src="img/icon/edit.svg" alt="" class="icon">Update Profile</a></li>
             <li><a href="#user-password-page">
                   <img src="img/icon/key.svg" alt="" class="icon">Change Password</a></li>
             <li><a href="#" class="js-logout">
@@ -702,7 +700,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
          </ul>
       </header>
       <div data-role="main">
-         <form id="user-password-form" data-ajax="false" style="padding:1em">
+         <!-- <form id="user-password-form" data-ajax="false" style="padding:1em">
             <div class="form-control">
                <label for="user-password-oldpassword" class="form-label">Old Password</label>
                <input id="user-password-oldpassword" type="password" class="form-input" data-role="none" placeholder="Type your old password">
@@ -713,9 +711,25 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
             </div>
             <div class="form-control">
                <label for="user-password-confirm" class="form-label">Confirm Password</label>
-               <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+               <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password again">
             </div>
-         </form>
+         </form> -->
+          <div class="overscroll">
+            <form id="user-password-form" data-ajax="false" style="padding:1em">
+               <div class="form-control">
+                  <label for="user-password-oldpassword" class="form-label">Old Password</label>
+                  <input id="user-password-oldpassword" type="password" class="form-input" data-role="none" placeholder="Type your old password">
+               </div>
+               <div class="form-control">
+                  <label for="user-password-password" class="form-label">New Password</label>
+                  <input id="user-password-password" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+               </div>
+               <div class="form-control">
+                  <label for="user-password-confirm" class="form-label">Confirm Password</label>
+                  <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+               </div>
+            </form>
+         </div>
       </div>
    </section>
 
