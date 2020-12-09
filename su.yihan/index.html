@@ -272,13 +272,13 @@
 <!-- page 6: list -->
 
    <section data-role="page" id="list-page">
-      <header data-role="header">
+      <header data-role="header" style="padding:0 1em">
          <form class="hotdog" id="list-search-form" data-ajax="false">
             <input type="search" id="list-search-input" data-role="none" placeholder="Search">
-         </form>     
+         </form>
+      </header>
 <!-- NOV 15 -->          
 <!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->        
-      </header>
 
       <header data-role="header">
          <div class="filter-list">
@@ -297,13 +297,8 @@
          </div> -->          
             <div class="animallist"></div>
          </div>
-         <div class="floater right bottom">
-          
-
-            <a href="#animal-add-page" data-activate="#animal-add-page" class=" ui-link btn-circle" >&plus;</a>
-         </div>
+         <div class="floater right bottom"><a href="#animal-add-page"  class="btn-circle" >&plus;</a></div>
       </div>
-      
       <footer data-role="footer">
          <ul>
             <li><a href="#recent-page">Map</a></li>
@@ -311,13 +306,14 @@
             <li><a href="#user-profile-page">Profile</a></li>
          </ul>
       </footer>
+   </section>
 <!-- Q: after I copy&paste the following to the recent page, it doesn't work anymore 
         can i use php?-->
 
 
 
 
-
+<!-- 
       <div class="modal" id="animal-add-page">
          <div class="modal-back" data-deactivate="#animal-add-page"></div>
          <form class="modal-popup" id="animal-add-form" data-ajax="false">
@@ -337,7 +333,7 @@
                </div>
                <div class="form-control">
                   <label for="animal-add-other-description" class="form-label">other descripton</label>
-                  <input id="animal-add-other-description" type="text" class="form-input" data-role="none">
+                  <input id="animal-add-description" type="text" class="form-input" data-role="none">
                </div>
             </div>
             <div class="modal-foot">
@@ -345,7 +341,7 @@
             </div>
          </form>
       </div>
-   </section>
+   </section> -->
 
 
 
@@ -353,7 +349,7 @@
 
 
 
-<!-- page 5: animal-adding-page -->
+<!-- page 5: animal-add-page -->
    <section data-role="page" id="animal-add-page">
       <header data-role="header">
          <h1>Add an Animal</h1>
@@ -391,7 +387,7 @@
       </div>
    </section>
 
-   
+
 
 
    
