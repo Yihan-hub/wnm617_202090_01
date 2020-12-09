@@ -273,32 +273,38 @@
 
 
    <!-- page 5: animal-adding-page -->
-   <section data-role="page" id="animal-adding-page">
+   <section data-role="page" id="animal-add-page">
       <header data-role="header">
          <h1>Add an Animal</h1>
          <ul>
             <li><a href="#" data-rel="back">&lsaquo;</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="back">&#10003;</a></li>
+            <li><a href="#" class="js-animal-add">&#10003;</a></li>
          </ul>
       </header>
       <div data-role="main">
-         <form id="animal-adding-page" data-ajax="false" style="padding:1em">
+         <form id="animal-add-page" data-ajax="false" style="padding:1em">
+
+
+         <input type="hidden" id="animal-add-destination" value="#animal-profile-page"> 
+            <!-- <input type="hidden" id="animal-add-destination" value="#list-page"> -->
+            <!-- by default it would navigate back to the list page right -->
+
             <div class="form-control">
-               <label for="add-animal-name" class="form-label">Animal Name</label>
-               <input id="add-animal-name" type="text" class="form-input" data-role="none" placeholder="Type the name of the animal">
+               <label for="animal-add-name" class="form-label">Animal Name</label>
+               <input id="animal-add-name" type="text" class="form-input" data-role="none" placeholder="Type the name of the animal">
             </div>
             <div class="form-control">
-               <label for="add-animal-type" class="form-label">Animal Type</label>
-               <input id="add-animal-type" type="text" class="form-input" data-role="none" placeholder="Type of the animal">
+               <label for="animal-add-type" class="form-label">Animal Type</label>
+               <input id="animal-add-type" type="text" class="form-input" data-role="none" placeholder="Type of the animal">
             </div>
             <div class="form-control">
-               <label for="add-animal-breed" class="form-label">Animal Breed</label>
-               <input id="add-animal-breed" type="text" class="form-input" data-role="none" placeholder="Breed of the animal">
+               <label for="animal-add-breed" class="form-label">Animal Breed</label>
+               <input id="animal-add-breed" type="text" class="form-input" data-role="none" placeholder="Breed of the animal">
             </div>
             <div class="form-control">
-               <label for="animal-description" class="form-label">Description</label>
-               <input id="animal-description" type="tex" class="form-input" data-role="none" placeholder="Add some description of the animal">
+               <label for="animal-add-description" class="form-label">Description</label>
+               <textarea id="animal-add-description" type="tex" class="form-input" data-role="none" placeholder="Add some description of the animal"></textarea>
             </div>
          </form>       
       </div>
@@ -332,10 +338,10 @@
             <li> -->
 <!-- NOV 18 when I put the <a> after <ul> the link doesn't work 
 AND why the circle button does not work?? if i put it in the <li> it disappears-->
-            <!-- <a href="#animal-adding-page" data-activate="#animal-adding-page" class=" ui-link" id="list-add">.</a>
+            <!-- <a href="#animal-adding-page"  class=" ui-link" id="list-add">.</a>
             </li>
-         </ul>
-          -->
+         </ul> -->
+         
 
 <!-- NOV 15 -->
             
@@ -364,7 +370,7 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
          <div class="floater right bottom">
           
 
-            <a href="#animal-adding-page" data-activate="#animal-adding-page" class=" ui-link btn-circle" >&plus;</a>
+            <a href="#animal-add-page" data-activate="#animal-add-page" class=" ui-link btn-circle" >&plus;</a>
          </div>
       </div>
       
@@ -381,8 +387,9 @@ AND why the circle button does not work?? if i put it in the <li> it disappears-
 
 
 
-      <div class="modal" id="animal-add-animal">
-         <div class="modal-back" data-deactivate="#animal-add-animal"></div>
+
+      <div class="modal" id="animal-add-page">
+         <div class="modal-back" data-deactivate="#animal-add-page"></div>
          <form class="modal-popup" id="animal-add-form" data-ajax="false">
             <div class="modal-head"><h1>Add Animal</h1></div>
             <div class="modal-body">

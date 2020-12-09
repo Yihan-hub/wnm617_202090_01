@@ -60,9 +60,9 @@ a {
     font-size: 0.9em;
 /*    color: black;*/
 }
-   a:hover {
+/*   a:hover {
       text-decoration: underline;
-   }
+   }*/
 
 
 
@@ -583,6 +583,13 @@ a#list-add {
     overflow:auto;
 }
 
+.animal-profile-image img {
+  width:30vw;
+  height:30vw;
+  object-fit:cover;
+}
+
+
 /*NOV 12 NOV 28*/
 .animal-popup img {
   width: 80px;
@@ -607,11 +614,6 @@ a#list-add {
 
 .animal-profile {
   padding:1em;
-}
-.animal-profile-image img {
-  width:30vw;
-  height:30vw;
-  object-fit:cover;
 }
 
 

@@ -34,7 +34,7 @@ const checkSigninForm = async() => {
       sessionStorage.removeItem('userId');
 
       // DO SOMETHING HERE
-      makeWarning("#signin-warning","Login Failed")
+      makeWarning("#signin-warning","Ooooops, your username or password seems incorrect.")
    }
 
    checkUserId();
@@ -85,4 +85,8 @@ const checkSignupForm = () => {
    }
 }
 
+
+// make an error for the user 
+
 // Nov 19 H console.log(d.id) line82
+// do something different, remind yourself to come back to this section and do something better possibly
