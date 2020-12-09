@@ -17,8 +17,10 @@ const makeUserProfile = templater(o=>`
    <div class="user-profile-image">
       <img src="${o.img}" alt="">
    </div>
+   <div style="padding:1em">
    <h2>${o.name}</h2>
    <h3>@${o.username}</h3>
+   <h3>${o.email}</h3>
    <div class"floater top right" style=""><a href="#user-settings-page">setting &utdot;</a></div>
    `);
 
@@ -31,6 +33,7 @@ const makeAnimalProfile = templater(o=>`
    <div>Type ${o.type}</div>
    <div>Breed ${o.breed}</div>
    <div><p>${o.description}</p></div>
+   <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
 
 // NOV 12 Animal popup on recent page, linking to Animal profile
@@ -49,12 +52,6 @@ const makeAnimalPopup = o => `
    <div class="form-button js-animal-jump" data-id="${o.animal_id}" style="width:100%">Visit</div>
 </div>
 `;
-
-
-
-
-
-
 
 
 const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
@@ -93,8 +90,6 @@ ${FormControl({
    value:o.email
 })}
 `;
-
-
 
 
 

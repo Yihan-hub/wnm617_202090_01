@@ -38,13 +38,16 @@
 //             throw d.error;
 //          }
 //          console.log(d);
-//          $.mobile.navigate("#signin-page");
+//          $.mobile.navigate("#signin-page");s
 //       })
 //    }
 // }
 
 
 const checkUserEditForm = () => {
+   let username = $("#user-edit-username").val();
+   let name = $("#user-edit-name").val();
+   let email = $("#user-edit-email").val();
    let username = $("#user-edit-username").val();
    let name = $("#user-edit-name").val();
    let email = $("#user-edit-email").val();

@@ -352,7 +352,7 @@
          <ul>
             <li><a href="#" data-rel="back">&lsaquo;</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-animal-add">&#10003;</a></li>
+            <li><a href="#" class="js-animal-add">Save<!-- &#10003; --></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -412,6 +412,9 @@
          <div class="profile-bottom">
             
             <div class="map"></div>
+            <div class="floater right bottom">
+               <a href="#location-add-page" class="btn-circle">&plus;</a>
+            </div>
          </div>
       </div>
    </section>
@@ -534,7 +537,9 @@
 
 
       <div data-role="main">
-         <div class="profile"></div>
+         <div class="overscroll">
+            <div class="profile"></div>
+         </div>
       </div>
 
       <footer data-role="footer">
@@ -697,6 +702,59 @@
                <div class="form-control">
                   <label for="user-password-confirm" class="form-label">Confirm Password</label>
                   <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+
+
+
+<!-- location-add-page -->
+
+
+   <section data-role="page" id="location-add-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#location-description-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-add-lat">
+         <input type="hidden" id="location-add-lng">
+         <div class="map"></div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+   <section data-role="page" id="location-description-page">
+      <header data-role="header">
+         <h1>Describe the Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-location-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="overscroll">
+            <form id="location-add-form" data-ajax="false" style="padding:1em">
+
+               <div class="form-control animal-profile-image">
+                  <img src="https://via.placeholder.com/400/?text=Upload" alt="">
+               </div>
+
+               <div class="form-control">
+                  <label for="location-add-description" class="form-label">Description</label>
+                  <textarea id="location-add-description" class="form-input" data-role="none"></textarea>
                </div>
             </form>
          </div>
