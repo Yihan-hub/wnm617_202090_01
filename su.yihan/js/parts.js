@@ -16,6 +16,7 @@ const makeAnimalList = templater(o=>`
 const makeUserProfile = templater(o=>`
    <div class="user-profile-image">
       <img src="${o.img}" alt="">
+      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" alt=""></a></a>
    </div>
    <div style="padding:1em">
    <h2>Name: ${o.name}</h2>
@@ -147,6 +148,9 @@ const drawAnimalList = (a,empty_phrase="No animals yet, you should add some.") =
 
 
 
+
+
+
 const capitalize = s => s[0].toUpperCase()+s.substr(1);
 
 const filterList = (animals,type) => {
@@ -162,4 +166,15 @@ const makeFilterList = (animals) => {
    |
    ${filterList(animals,'breed')}
    `
+}
+
+
+
+
+
+const makeUploaderImage = ({namespace,folder,name}) => {
+   console.log(namespace,folder,name)
+   $(`#${namespace}-image`).val(folder+name);
+   $(`#${namespace}-page .image-uploader`)
+      .css({'background-image':`url(${folder+name}`})
 }

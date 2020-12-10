@@ -16,6 +16,8 @@
 
 <!-- DEC 3 -->
    <link rel="apple-touch-icon" href=".site_logo.png">
+   <!-- <link rel="icon" href="./site_logo.png"> -->
+
 
 
 
@@ -68,6 +70,7 @@
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
 <!-- Sep 24 01:59:25 the flex stretch at the top push our form down to the bottom of our page instead of in the center and also fills the width. -->
             <img src="img/icon3.png">
+       <!--      <img src="./site_logo.png" style="width:90vw;height:90vw;" class="icon" alt=""> -->
          </div>      	
 <!-- add data-role="none" for any button or input, and "data-ajax="false" for everyform  -->
          <form id="signin-form" data-ajax="false" style="padding:1em">
@@ -272,7 +275,7 @@
 <!-- page 6: list -->
 
    <section data-role="page" id="list-page">
-      <header data-role="header" style="padding:0 1em">
+      <header data-role="header" style="padding:0.6em 1.2em">
          <form class="hotdog" id="list-search-form" data-ajax="false">
             <input type="search" id="list-search-input" data-role="none" placeholder="Search">
          </form>
@@ -293,7 +296,8 @@
          <div class="overscroll">     
             <div class="animallist"></div>
          </div>
-         <div class="floater right bottom"><a href="#animal-add-page"  class="btn-circle" >&plus;</a></div>
+        <!--  <div class="floater right bottom"><a href="#animal-add-page"  class="btn-circle" >&plus;</a></div> -->
+         <div class="floater right bottom"><a class="btn-circle" href="#animal-add-page">&plus;</a></div>
       </div>
       <footer data-role="footer">
          <ul>
@@ -387,6 +391,28 @@
 
 
 
+
+
+
+   <section data-role="page" id="user-upload-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-user-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-upload-form" data-ajax="false">
+            <input type="hidden" id="user-upload-image">
+            <label class="image-uploader full">
+               <input type="file" data-role="none" id="user-upload-input">
+            </label>
+         </form>
+         <label for="user-upload-input" class="form-button">Choose Image</label>
+      </div>
+   </section>
 
    
 

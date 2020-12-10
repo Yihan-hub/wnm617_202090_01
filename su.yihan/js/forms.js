@@ -22,26 +22,6 @@
    }
 }*/
 
-// const checkSignupForm = () => {
-//    let username = $("#signup-username").val();
-//    let email = $("#signup-email").val();
-//    let password = $("#signup-password").val();
-//    let passwordconfirm = $("#signup-password-confirm").val();
-
-//    if(password!=passwordconfirm) {
-//       throw "Passwords don't match";
-//       return;
-//    } else {
-//       query({type:'insert_user',params:[username,email,password]})
-//       .then(d=>{
-//          if(d.error) {
-//             throw d.error;
-//          }
-//          console.log(d);
-//          $.mobile.navigate("#signin-page");s
-//       })
-//    }
-// }
 
 
 const checkUserEditForm = () => {
@@ -106,11 +86,6 @@ const checkAnimalEditForm = () => {
 
 
 
-
-
-
-
-
 const checkLocationAddForm = () => {
    let lat = $("#location-add-lat").val();
    let lng = $("#location-add-lng").val();
@@ -136,7 +111,6 @@ const checkLocationAddForm = () => {
 
 
 
-
 const checkAnimalDelete = id => {
    query({
       type:'delete_animal',
@@ -148,6 +122,8 @@ const checkAnimalDelete = id => {
       window.history.back();
    })
 }
+
+
 
 
 
@@ -182,3 +158,34 @@ const checkListFilter = async ({field,value}) => {
 
    drawAnimalList(r.result,"Search produced no results.");
 }
+
+
+
+
+
+
+
+
+const checkUpload = file => {
+   let fd = new FormData();
+   fd.append("image",file);
+
+   return fetch('data/api.php',{
+      method:'POST',
+      body:fd
+   }).then(d=>d.json());
+}
+
+const checkUserUploadForm = () => {
+   let upload = $("#user-upload-image").val()
+   if(upload=="") return;
+
+   query({
+      type:'update_user_image',
+      params:[upload,sessionStorage.userId]
+   }).then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      window.history.back();
+   })

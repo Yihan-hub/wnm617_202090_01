@@ -5,11 +5,12 @@ const ListPage = async() => {
 
    console.log(d);
 
-   $("#list-page .animallist").html(
-      d.result.length ?
-         makeAnimalList(d.result) :
-         "You need to add some animals."
-   )
+   // $("#list-page .animallist").html(
+   //    d.result.length ?
+   //       makeAnimalList(d.result) :
+   //       "You need to add some animals."
+   // )
+   $("#list-page .filter-list").html(makeFilterList(d.result));
 
    drawAnimalList(d.result);
 }
@@ -79,8 +80,18 @@ const UserEditPage = async() => {
    $("#user-edit-form")
       .html(makeUserEditForm(d.result[0]))
 }
-
-
+const UserUploadPage = async() => {
+   query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   }).then(d=>{
+      makeUploaderImage({
+         namespace:'user-upload',
+         folder:'',
+         name:d.result[0].img
+      })
+   })
+}
 
 
 
