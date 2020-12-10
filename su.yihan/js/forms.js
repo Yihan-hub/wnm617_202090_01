@@ -48,9 +48,8 @@ const checkUserEditForm = () => {
    let username = $("#user-edit-username").val();
    let name = $("#user-edit-name").val();
    let email = $("#user-edit-email").val();
-   let username = $("#user-edit-username").val();
-   let name = $("#user-edit-name").val();
-   let email = $("#user-edit-email").val();
+   let favoriteAnimal = $("#user-edit-favoriteAnimal").val();
+
 
    query({
       type:'update_user',

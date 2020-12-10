@@ -18,9 +18,10 @@ const makeUserProfile = templater(o=>`
       <img src="${o.img}" alt="">
    </div>
    <div style="padding:1em">
-   <h2>${o.name}</h2>
-   <h3>@${o.username}</h3>
-   <h3>${o.email}</h3>
+   <h2>Name: ${o.name}</h2>
+   <h3>Username: @${o.username}</h3>
+   <h3>Email: ${o.email}</h3>
+   <h3>FavoriteAnimal: ${o.favoriteAnimal}</h3>
    <div class"floater top right" style=""><a href="#user-settings-page">setting &utdot;</a></div>
    `);
 
@@ -88,6 +89,14 @@ ${FormControl({
    type:'text',
    placeholder:'Type your email',
    value:o.email
+})}
+${FormControl({
+   namespace:'user-edit',
+   name:'favoriteAnimal',
+   displayname:'favoriteAnimal',
+   type:'text',
+   placeholder:'Type your favoriteAnimal',
+   value:o.name
 })}
 `;
 

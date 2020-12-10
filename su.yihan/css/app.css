@@ -260,7 +260,7 @@ div#modal {
 .ui-header a {
    padding:0 0.5em;
    display:block;
-   /*font-size: 2em;*/
+   font-size: 2em;
 }
 .ui-footer a:hover,
 .ui-header a:hover {
