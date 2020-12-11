@@ -107,7 +107,10 @@ const AnimalProfilePage = async() => {
    .then(d=>{
       console.log(d);
       makeMap("#animal-profile-page .map").then(map_el=>{
-         makeMarkers(map_el,d.result)
+         makeMarkers(map_el,d.result.map(o=>{
+            o.icon = 'img/icon.png';
+            return o;
+         }))
       });
    });
 

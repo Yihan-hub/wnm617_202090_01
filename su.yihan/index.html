@@ -201,7 +201,7 @@
       <header>
          <h2>Recent</h2>
           <div class="floater right top">
-            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
+           <!--  <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> -->
 <!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->     
          </div>
       </header>
@@ -364,7 +364,13 @@
          <form id="animal-add-page" data-ajax="false" style="padding:1em">
 
 
-         <input type="hidden" id="animal-add-destination" value="#animal-profile-page"> 
+             <input type="hidden" id="animal-add-destination" value="#list-page">
+
+               <input type="hidden" id="animal-add-image">
+               <label class="image-uploader thumbnail">
+                  <input type="file" data-role="none" id="animal-add-upload">
+               </label>
+
             <!-- <input type="hidden" id="animal-add-destination" value="#list-page"> -->
             <!-- by default it would navigate back to the list page right -->
 
