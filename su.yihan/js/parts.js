@@ -151,7 +151,7 @@ const drawAnimalList = (a,empty_phrase="No animals yet, you should add some.") =
 
 
 
-
+// fixed, Dec 10
 const capitalize = s => s=='' ? '' : s[0].toUpperCase()+s.substr(1);
 
 const filterList = (animals,type) => {
