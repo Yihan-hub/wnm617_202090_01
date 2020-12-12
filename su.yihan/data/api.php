@@ -76,6 +76,7 @@ function makeUpload($file,$folder) {
 
 
 
+
 function makeStatement($data) {
    $c = makeConn();
    $t = $data->type;
@@ -92,7 +93,7 @@ function makeStatement($data) {
 
 
       case "user_by_id":
-         return makeQuery($c,"SELECT id,username,email,date_create,img FROM `track_users` WHERE `id`=?",$p);
+         return makeQuery($c,"SELECT id,name,username,email,date_create,img FROM `track_users` WHERE `id`=?",$p);
       case "animal_by_id":
          return makeQuery($c,"SELECT * FROM `track_animals` WHERE `id`=?",$p);
       case "location_by_id":
@@ -103,9 +104,7 @@ function makeStatement($data) {
          return makeQuery($c,"SELECT * FROM `track_animals` WHERE `user_id`=?",$p);
       case "locations_by_animal_id":
          return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id`=?",$p);
-// Nov 18 the user profile is blank: inspect-network-api.php-preview: "name" undefined because my sql does not have "name" but "user name" only
 
-// check signin
 
       case "check_signin":
          return makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? AND `password`=md5(?)",$p);
@@ -124,7 +123,8 @@ function makeStatement($data) {
             ",$p);
 
 
-  /* ----- SEARCH ------ */
+ 
+ /* ----- SEARCH ------ */
       case "search_animals":
          $p = ["%$p[0]%",$p[1]];
          return makeQuery($c,"SELECT * FROM
@@ -145,7 +145,7 @@ function makeStatement($data) {
 
 
 
-       /* ----- CRUD ------ */
+/* ----- CRUD ------ */
 
       // INSERTS
       case "insert_user":
@@ -172,35 +172,21 @@ function makeStatement($data) {
             ",$p);
          return ["id"=>$c->lastInsertId()];
 
-      // case "insert_location":
-      //    $r = makeQuery($c,"INSERT INTO
-      //       `track_locations`
-      //       (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
-      //       VALUES
-      //       (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
-      //       ",$p);
-      //    return [
-      //       "r"=>$r,
-      //       "p"=>$p,
-      //       "id"=>$c->lastInsertId()];
-
-      // my track_loctions.sql doesn't have "icon"  Dec 3
-
       case "insert_location":
          $r = makeQuery($c,"INSERT INTO
             `track_locations`
             (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
             VALUES
-            (?, ?, ?, ?, 'img/icon.png', NOW())
+            (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
             ",$p);
          return [
             "r"=>$r,
             "p"=>$p,
             "id"=>$c->lastInsertId()];
+       // my track_loctions.sql doesn't have "icon"  Dec 3
 
 
-
-      // UPDATE
+       // UPDATE
 
       case "update_user":
          $r = makeQuery($c,"UPDATE
