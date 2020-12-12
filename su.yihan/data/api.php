@@ -184,7 +184,7 @@ function makeStatement($data) {
       //       "p"=>$p,
       //       "id"=>$c->lastInsertId()];
 
-      my track_loctions.sql doesn't have "icon"  Dec 3
+      // my track_loctions.sql doesn't have "icon"  Dec 3
 
       case "insert_location":
          $r = makeQuery($c,"INSERT INTO

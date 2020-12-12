@@ -8,6 +8,7 @@
   '{{repeat(10)}}',
   {
     id:'{{index(1)}}',
+    name: '{{firstName()}} {{surname()}}',
     username: function(){
       return 'user'+this.id;
     },
@@ -22,10 +23,10 @@
     },
     date_create: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd:mm:ss")}}',
 
-    favoriteAnimal: function (tags) {
-      var animals = ['dog', 'cat', 'bird', 'fish'];
-      return animals[tags.integer(0, animals.length - 1)];
-    }
+    // favoriteAnimal: function (tags) {
+    //   var animals = ['dog', 'cat', 'bird', 'fish'];
+    //   return animals[tags.integer(0, animals.length - 1)];
+    // }
   }
 ]
 
