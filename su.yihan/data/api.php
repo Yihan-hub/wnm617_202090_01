@@ -172,31 +172,31 @@ function makeStatement($data) {
             ",$p);
          return ["id"=>$c->lastInsertId()];
 
-      case "insert_location":
-         $r = makeQuery($c,"INSERT INTO
-            `track_locations`
-            (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
-            VALUES
-            (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
-            ",$p);
-         return [
-            "r"=>$r,
-            "p"=>$p,
-            "id"=>$c->lastInsertId()];
-
-      // my track_loctions.sql doesn't have "icon"  Dec 3
-
       // case "insert_location":
       //    $r = makeQuery($c,"INSERT INTO
       //       `track_locations`
       //       (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
       //       VALUES
-      //       (?, ?, ?, ?, 'img/icon.png', NOW())
+      //       (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
       //       ",$p);
       //    return [
       //       "r"=>$r,
       //       "p"=>$p,
       //       "id"=>$c->lastInsertId()];
+
+      my track_loctions.sql doesn't have "icon"  Dec 3
+
+      case "insert_location":
+         $r = makeQuery($c,"INSERT INTO
+            `track_locations`
+            (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, 'img/icon.png', NOW())
+            ",$p);
+         return [
+            "r"=>$r,
+            "p"=>$p,
+            "id"=>$c->lastInsertId()];
 
 
 
