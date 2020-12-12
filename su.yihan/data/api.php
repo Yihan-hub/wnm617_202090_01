@@ -145,8 +145,6 @@ function makeStatement($data) {
 
 
 
- /* ----- CRUD ------ */
-
        /* ----- CRUD ------ */
 
       // INSERTS
@@ -186,6 +184,20 @@ function makeStatement($data) {
             "p"=>$p,
             "id"=>$c->lastInsertId()];
 
+      // my track_loctions.sql doesn't have "icon"  Dec 3
+
+      // case "insert_location":
+      //    $r = makeQuery($c,"INSERT INTO
+      //       `track_locations`
+      //       (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+      //       VALUES
+      //       (?, ?, ?, ?, 'img/icon.png', NOW())
+      //       ",$p);
+      //    return [
+      //       "r"=>$r,
+      //       "p"=>$p,
+      //       "id"=>$c->lastInsertId()];
+
 
 
       // UPDATE
@@ -209,7 +221,7 @@ function makeStatement($data) {
             ",$p,false);
          return ["result"=>"success"];
 
-         case "update_animal":
+      case "update_animal":
          $r = makeQuery($c,"UPDATE
             `track_animals`
             SET

@@ -1,10 +1,9 @@
 // JSON GENERATOR-App Konbert (convert)-Export-phpMyAdmin (SQL) run and export-replace the .sql exported by App Konbert
 
-
-
 // USER TEMPLATE YOU SHOLD HAVE A COOLER ONE THIS WEEK
 // this semester: 3 table data (608: 1 table)
 // sort by id or date
+// USER TEMPLATE
 [
   '{{repeat(10)}}',
   {
@@ -41,6 +40,7 @@
     name:'{{company()}}',
     
     type:'{{random("dog","cat")}}',    
+
     breed:function(tags){
       var breeds = {
         dog:["Alaska Malamute","Corgi","American Eskimo Dog"],
