@@ -23,7 +23,7 @@ const makeUserProfile = templater(o=>`
    <h3>Username: @${o.username}</h3>
    <h3>Email: ${o.email}</h3>
    <h3>FavoriteAnimal: ${o.favoriteAnimal}</h3>
-   <div class"floater top right" style=""><a href="#user-settings-page">setting &utdot;</a></div>
+   <div class="floater top right" style="font-size:2em"><a href="#user-settings-page"> &utdot;</a></div>
    `);
 
 const makeAnimalProfile = templater(o=>`
