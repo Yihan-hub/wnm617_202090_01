@@ -1,6 +1,6 @@
 
 
-/*const checkAnimalAddForm = () => {
+const checkAnimalAddForm = () => {
    let name = $("#animal-add-name").val();
    let type = $("#animal-add-type").val();
    let breed = $("#animal-add-breed").val();
@@ -20,7 +20,7 @@
          $.mobile.navigate("#signin-page");
       })
    }
-}*/
+}
 
 
 
