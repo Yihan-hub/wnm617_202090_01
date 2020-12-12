@@ -1,10 +1,9 @@
 
-
-const checkAnimalAddForm = () => {
-   let name = $("#animal-add-name").val();
-   let type = $("#animal-add-type").val();
-   let breed = $("#animal-add-breed").val();
-   let description = $("#animal-add-description").val();
+const checkSignupForm = () => {
+   let username = $("#signup-username").val();
+   let email = $("#signup-email").val();
+   let password = $("#signup-password").val();
+   let passwordconfirm = $("#signup-password-confirm").val();
 
    if(password!=passwordconfirm) {
       throw "Passwords don't match";
@@ -16,20 +15,15 @@ const checkAnimalAddForm = () => {
             throw d.error;
          }
          console.log(d);
-          // console.log(d.id);
          $.mobile.navigate("#signin-page");
       })
    }
 }
 
-
-
 const checkUserEditForm = () => {
    let username = $("#user-edit-username").val();
    let name = $("#user-edit-name").val();
    let email = $("#user-edit-email").val();
-   let favoriteAnimal = $("#user-edit-favoriteAnimal").val();
-
 
    query({
       type:'update_user',
@@ -73,7 +67,6 @@ const checkAnimalEditForm = () => {
    let description = $("#animal-edit-description").val();
    let image = $("#animal-edit-image").val();
 
-
    query({
       type:'update_animal',
       params:[name,type,breed,description,image,sessionStorage.animalId]
@@ -84,6 +77,11 @@ const checkAnimalEditForm = () => {
       window.history.back();
    })
 }
+
+
+
+
+
 
 
 
@@ -125,6 +123,7 @@ const checkAnimalDelete = id => {
       window.history.back();
    })
 }
+
 
 
 
