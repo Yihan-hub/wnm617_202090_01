@@ -84,7 +84,7 @@ $(()=>{
       })
    })
 
-
+// so we should set an upload folder in the root
 
 
    // ANCHOR CLICKS

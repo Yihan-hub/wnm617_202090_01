@@ -129,8 +129,6 @@ const checkAnimalDelete = id => {
 
 
 
-
-
 const checkSearchForm = async() => {
    let s = $("#list-search-input").val()
    console.log(s);
