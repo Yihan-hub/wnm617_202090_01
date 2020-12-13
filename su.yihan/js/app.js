@@ -49,6 +49,9 @@ $(()=>{
    })
 
 
+
+
+
 // FORM SUBMIT CLICKS
 
    .on("click",'.js-user-edit',function(e){
@@ -62,11 +65,8 @@ $(()=>{
    })
    .on("click",'.js-location-add',function(e){
       checkLocationAddForm();
-   })
-
-
-   
-.on("click",'.js-user-upload',function(e){
+   })  
+   .on("click",'.js-user-upload',function(e){
       checkUserUploadForm();
    })
 
@@ -83,16 +83,6 @@ $(()=>{
          makeUploaderImage(this,d.result,'uploads/')
       })
    })
-
-
-   
-.on("click",".filter",function(){
-      checkListFilter($(this).data());
-   })
-   .on("change",".image-uploader input",function(){
-      checkUpload(this.files[0])
-   })
-
 
 
 

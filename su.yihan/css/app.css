@@ -586,25 +586,17 @@ a#list-add {
     overflow:auto;
 }
 
+
+
+.animal-profile {
+  padding:1em;
+}
 .animal-profile-image img {
   width:30vw;
   height:30vw;
   object-fit:cover;
 }
 
-
-/*NOV 12 NOV 28*/
-.animal-popup img {
-  width: 80px;
-}
-
-.animal-popup h2 {
-  margin: 0;
-}
-
-.animal-popup-description {
-  padding: 1em
-}
 
 
 
@@ -613,13 +605,32 @@ a#list-add {
   width: calc(100% - 2em);
 }
 
-
-
-.animal-profile {
-  padding:1em;
+/*NOV 12 NOV 28*/
+.animal-popup img {
+  width: 80px;
+}
+.animal-popup h2 {
+  margin: 0;
+}
+.animal-popup-description {
+  padding: 1em
 }
 
 
+
+
+
+
+
+.filter-list {
+    display: flex;
+    overflow: auto;
+}
+.filter {
+    padding: 0 0.5em;
+    font-weight: bold;
+    cursor:pointer;
+}
 
 
 
@@ -739,17 +750,6 @@ th {
   object-fit:cover;
 }
 
-
-.filter-list {
-    display: flex;
-    overflow: auto;
-}
-
-.filter {
-    padding: 0 0.5em;
-    font-weight: bold;
-    cursor:pointer;
-}
 
 
 

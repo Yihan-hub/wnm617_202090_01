@@ -141,11 +141,12 @@ ${FormControl({
 
 
 
-const drawAnimalList = (a,empty_phrase="No animals yet, you should add some.") => {
+const drawAnimalList = (a,empty_phrase="No animals yet, come on, add some.") => {
    $("#list-page .animallist").html(
       a.length ? makeAnimalList(a) : empty_phrase
    )
 }
+
 
 
 
