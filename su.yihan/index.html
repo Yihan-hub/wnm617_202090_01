@@ -1,30 +1,19 @@
-<!-- change all the map-page to recent page -->
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <!-- Problem: when reloading the page, it was messed up: it showed the sign-up and sign-in page at the same time. But, if I go to this page from the link on index page, there is no such problem.-->
-   <!-- Don't ever copy the code in the "Elements" of the browser inspect bcz the code in it has been changed by the JQuery, so go to the "Source" then copy!-->
    <meta charset="UTF-8">
 
 
    <meta name="apple-mobile-web-app-capable" content="yes">
    <meta name="mobile-web-app-capable" content="yes">
-
-
-
 <!-- DEC 3 -->
    <link rel="apple-touch-icon" href=".site_logo.png">
    <!-- <link rel="icon" href="./site_logo.png"> -->
 
 
-
-
-
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
    <title>Ani-Trace</title>
+
 
    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
@@ -32,7 +21,6 @@
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
 <!-- always load library code before local code --> 
-
 <!-- lib change?? -->
 <!-- Hamilton's script -->
    <script src="lib/js/jquery-2.2.4.min.js"></script>
@@ -45,34 +33,19 @@
    <script src="js/app.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-<!--    <script 
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c" defer 
-   ></script> -->
+
    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c"
-      defer
-    ></script>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcIn2ucHc--F8i7hN1mcgxN0axbClKT8c" defer ></script>
+
 </head>
-
-
-
-
-
-
-
-
-
 <body>
 
-<!-- page 1: sign-in -->
+
    <section data-role="page" id="signin-page" style="background-color: #F7D7C8">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-<!-- Sep 24 01:59:25 the flex stretch at the top push our form down to the bottom of our page instead of in the center and also fills the width. -->
             <img src="img/icon3.png">
-       <!--      <img src="./site_logo.png" style="width:90vw;height:90vw;" class="icon" alt=""> -->
          </div>      	
-<!-- add data-role="none" for any button or input, and "data-ajax="false" for everyform  -->
          <form id="signin-form" data-ajax="false" style="padding:1em">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
@@ -83,11 +56,10 @@
                <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
             </div>
             <div class="form-control">
-               <!--change <a href="#list-page" class="form-button ui-link">Sign In</a> to input   Oct 1-->
                <input type="submit" data-role="none" class="form-button signin" value="Sign In">
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Don't have an account? <a href="#signup-page" class="ui-link" style="color:#FF3A00">Sign Up</a>! <!-- <a href="#recent-page">Skip</a> for the app can only be visit after signing in. ex. you can visit ins website, but not the app-->
+               Don't have an account? <a href="#signup-page" class="ui-link" style="color:#FF3A00">Sign Up</a>! 
             </div>
          </form>
       </div>
@@ -99,22 +71,8 @@
       </div>
    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- page 2: sign-up -->
-   <section data-role="page" id="signup-page" data-url="signup-page">
+   <section data-role="page" id="signup-page">
       <div data-role="main">
          <form id="signup-form" data-ajax="false" style="padding:1em">
             <div class="form-control">
