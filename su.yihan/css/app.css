@@ -711,7 +711,7 @@ hr#user-settings-hr {
     color: --color-neutral-lighter;
     color: #AEAEAE;
 }
-}
+
 a.js-logout.ui-link {
     text-decoration: none;
     position: 3em;
@@ -722,6 +722,7 @@ h4.Logout {
 a#update {
     margin-left: auto;
     margin-right: auto;
+}
 
 /*animal profile*/
 .animal-profile-item {
