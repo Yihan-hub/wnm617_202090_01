@@ -106,6 +106,16 @@ $(()=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
    .on('click','[data-activate]',function(e){
       let target = $(this).data('activate');
       $(target).addClass("active")

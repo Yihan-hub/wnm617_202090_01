@@ -131,7 +131,7 @@ a {
     width: 100%;
     display: inline-block;
     border-width: 0;
-    background-color: #09489C/*var(--color-main-dark)*/;
+    background-color: #2094B7 /*#09489C*//*var(--color-main-dark)*/;
     padding: 0.5em 1em;
     border-radius: 1.2em;
     font: inherit;
@@ -768,16 +768,6 @@ th {
    background-position:center;
    background-size:contain;
    background-repeat:no-repeat;
-
-
-
-   .image-uploader.thumbnail {
-   width:5em;
-   height:5em;
-   border-radius:0.5em;
-   background-position:center;
-   background-size:cover;
-   position:relative;
 }
 .image-uploader.thumbnail {
    width:5em;

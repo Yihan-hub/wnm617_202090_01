@@ -7,7 +7,6 @@ const makeAnimalList = templater(o=>`
       </div>
       <div class="animallist-description">
          <div class="animallist-name">${o.name}</div>
-         
          <div class="animallist-breed"><strong>Breed</strong> ${o.breed}</div>
       </div>
    </div>
@@ -32,8 +31,9 @@ const makeAnimalProfile = templater(o=>`
       <img src="${o.img}" alt="">
    </div>
    <h2>${o.name}</h2>
-   <div>Type ${o.type}</div>
-   <div>Breed ${o.breed}</div>
+   <div>Type: ${o.type}</div>
+   <div>Breed: ${o.breed}</div>
+   <div>Health: ${o.health}</div>
    <div><p>${o.description}</p></div>
    <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
@@ -50,6 +50,7 @@ const makeAnimalPopup = o => `
       <h2>${o.name}</h2>
       <div>${o.type}</div>
       <div>${o.breed}</div>
+      <div>Health ${o.health}</div>
    </div>
    <div class="form-button js-animal-jump" data-id="${o.animal_id}" style="width:100%">Visit</div>
 </div>
@@ -132,6 +133,14 @@ ${FormControl({
    type:'text',
    placeholder:'Type the breed',
    value:o.breed
+})}
+${FormControl({
+   namespace:'animal-edit',
+   name:'health',
+   displayname:'Health',
+   type:'text',
+   placeholder:'Describe the health',
+   value:o.health
 })}
 <div class="form-control">
    <label for="animal-edit-description" class="form-label">Description</label>

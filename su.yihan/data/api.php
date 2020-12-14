@@ -166,9 +166,9 @@ function makeStatement($data) {
       case "insert_animal":
          $r = makeQuery($c,"INSERT INTO
             `track_animals`
-            (`user_id`,`name`,`type`,`breed`,`description`,`img`,`date_create`)
+            (`user_id`,`name`,`type`,`breed`,`health`,`description`,`img`,`date_create`)
             VALUES
-            (?, ?, ?, ?, ?, ?, NOW())
+            (?, ?, ?, ?, ?, ?, ?, NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
 
@@ -214,6 +214,7 @@ function makeStatement($data) {
             `name` = ?,
             `type` = ?,
             `breed` = ?,
+            `health` = ?,
             `description` = ?,
             `img` = ?
             WHERE `id` = ?
