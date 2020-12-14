@@ -50,7 +50,7 @@ const makeAnimalPopup = o => `
       <h2>${o.name}</h2>
       <div>${o.type}</div>
       <div>${o.breed}</div>
-      <div>Health ${o.health}</div>
+      <div>${o.health}</div>
    </div>
    <div class="form-button js-animal-jump" data-id="${o.animal_id}" style="width:100%">Visit</div>
 </div>
