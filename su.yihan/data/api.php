@@ -168,7 +168,7 @@ function makeStatement($data) {
             `track_animals`
             (`user_id`,`name`,`type`,`breed`,`health`,`description`,`img`,`date_create`)
             VALUES
-            (?, ?, ?, ?, ?, ?, ?, NOW())
+            (?, ?, ?, ?, ?, ?, NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
 

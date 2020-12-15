@@ -20,12 +20,9 @@ $(()=>{
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
 
-         case "mini-list-page": ListPage(); break;
-
          case "user-profile-page": UserProfilePage(); break;
          case "user-edit-page": UserEditPage(); break;
          case "user-upload-page": UserUploadPage(); break;
-
 
          case "animal-profile-page": AnimalProfilePage(); break;
          case "animal-edit-page": AnimalEditPage(); break;
@@ -54,6 +51,7 @@ $(()=>{
 
 
 
+
 // FORM SUBMIT CLICKS
 
    .on("click",'.js-user-edit',function(e){
@@ -67,7 +65,7 @@ $(()=>{
    })
    .on("click",'.js-location-add',function(e){
       checkLocationAddForm();
-   })  
+   })
    .on("click",'.js-user-upload',function(e){
       checkUserUploadForm();
    })
@@ -85,7 +83,7 @@ $(()=>{
          makeUploaderImage(this,d.result,'uploads/')
       })
    })
-
+   
 // so we should set an upload folder in the root
 
 

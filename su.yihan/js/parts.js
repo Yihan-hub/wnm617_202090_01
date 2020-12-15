@@ -1,5 +1,4 @@
 // Curried function
-
 const makeAnimalList = templater(o=>`
    <div class="animallist-item js-animal-jump" data-id="${o.id}">
       <div class="animallist-icon">
