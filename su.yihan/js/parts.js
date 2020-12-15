@@ -98,7 +98,7 @@ ${FormControl({
    displayname:'favoriteAnimal',
    type:'text',
    placeholder:'Type your favoriteAnimal',
-   value:o.name
+   value:o.favoriteAnimal
 })}
 `;
 
@@ -155,11 +155,6 @@ const drawAnimalList = (a,empty_phrase="No animals yet, come on, add some.") => 
       a.length ? makeAnimalList(a) : empty_phrase
    )
 }
-
-
-
-
-
 
 // fixed, Dec 10
 const capitalize = s => s=='' ? '' : s[0].toUpperCase()+s.substr(1);
