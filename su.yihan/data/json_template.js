@@ -86,7 +86,7 @@
      ],
     */
     photo: 'https://via.placeholder.com/400/',
-    // icon: 'https://via.placeholder.com/100/?text=ICON',
+    icon: 'https://via.placeholder.com/100/?text=ICON',
     date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
   }
 ]

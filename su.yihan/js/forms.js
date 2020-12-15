@@ -53,9 +53,10 @@ const checkAnimalAddForm = () => {
       if(d.error) {
          throw d.error;
       }
+     //document.getElementById("animal-add-form").reset();
 
-      $("#animal-add-form")[0].reset();
-
+     // $("#animal-add-form")[0].reset();
+//$("#animal-add-form").reset();
       console.log(d);
       sessionStorage.animalId = d.id;
       $.mobile.navigate($("#animal-add-destination").val());
