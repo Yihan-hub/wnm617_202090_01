@@ -56,7 +56,6 @@ const checkAnimalAddForm = () => {
 
       $("#animal-add-form")[0].reset();
   
-
       console.log(d);
       sessionStorage.animalId = d.id;
       $.mobile.navigate($("#animal-add-destination").val());
