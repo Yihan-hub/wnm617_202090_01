@@ -20,6 +20,8 @@ $(()=>{
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
 
+         case "mini-list-page": ListPage(); break;
+
          case "user-profile-page": UserProfilePage(); break;
          case "user-edit-page": UserEditPage(); break;
          case "user-upload-page": UserUploadPage(); break;

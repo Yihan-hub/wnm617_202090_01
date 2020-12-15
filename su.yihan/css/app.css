@@ -202,7 +202,7 @@ input.form-button.signin {
 .ui-footer {
    flex: none;
    /*height:var(--header-height);*/
-   height: 4em;
+   height: 5em;
    line-height:var(--header-height);
    border-width:0;
    background-color:var(--color-white);
@@ -217,11 +217,11 @@ input.form-button.signin {
    /*padding:0;*/
    position:absolute;
    top:0;
-   left:0;
+   left:2em;
    /*NOV 18*/
    /*width:35%;*/
    width:100%;
-   text-align:center;
+   text-align:left;
    z-index:1;
    /*NOV 18*/
    font-size: 1.5em; 
@@ -490,8 +490,8 @@ div#modal {
    position:relative;
 }
 .user-profile-image>img {
-   width:calc(100vmin - 4em);
-   height:calc(100vmin - 4em);
+   width:calc(40vmin - 4em);
+   height:calc(40vmin - 4em);
    margin:2em;
    border-radius:50%;
    object-fit:cover;
@@ -527,8 +527,6 @@ div#modal {
   right:1em;
   transform:translateY(-50%);
 }
-
-
 
 
 

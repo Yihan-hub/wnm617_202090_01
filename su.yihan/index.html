@@ -117,38 +117,25 @@
 <!-- recent -->
 
 
-   <section data-role="page" id="recent-page">
-      <header>
+   <section data-role="page" id="recent-page" >
+
+      <header data-role="header">
          <h2>Recent</h2>
-          <div class="floater right top">
-           <!--  <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> -->
-<!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->     
-         </div>
-      </header>
+      </header>   
 
-      <div data-role="main">
+<!-- right drawer -->
+      <!-- <div data-role="main">
          <div class="map"></div>
-
          <div class="floater right bottom">
-            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>
-<!-- if <div class="btn-circle" data-toggle="#map-drawer">&plus;</div> then the drawer cannot toggle!!-->        
-         </div>
-
-     
+            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>       
+         </div>     
          <div class="modal" id="map-drawer">
-            <!-- <div class="modal-back" data-deactivate="#map-drawer"></div> -->
-            <div class="modal-drawer bottom">
-            <!-- OR <div class="modal-drawer top"> ect. -->
-               <!-- <div class="modal-head"> -->
+            <div class="modal-drawer right">
                <div id="modal" class="modal-head" data-role="header">
                   <h5>Add a Record</h5>
-               <ul>   
-                  <!-- <li><a href="#" data-rel="back"></a></li> -->
-                  <li class="flex-stretch"></li>
-                  <!-- <li><a href="#" data-toggle="#map-drawer">🞨</a></li>  works well -->
-<!-- Nov 14   --> <!-- <li><a href="#" data-rel="back">🞨</a></li> link to the user profile page??? -->
-               </ul>
-                  
+                  <ul>   
+                     <li class="flex-stretch"></li>                  
+                  </ul>                  
                </div>
                <div class="modal-body">
                   Choose an animal
@@ -157,23 +144,71 @@
                      <option>Jerry</option>
                   </select>
                   <hr>
-                  <!-- Location: Alta Plaza Park -->
                   &#9906; Pick a location on the map and save it!
-                  <input id="recommanded location" type="text" class="form-input" data-role="none" placeholder="Or type the location">                     
+                  <div data-role="main">
+                     <div class="overscroll">
+                        <div class="animallist"></div>
+                     </div>                     
+                  </div>
                   <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
                   <button class="form-button cancel-button" data-toggle="#map-drawer">Cancel</button>
                </div> 
             </div>
          </div>
-      </div>
+      </div>   -->
+
+
+      <div data-role="main">
+         <div class="map"></div>
+         <div class="floater right bottom">
+            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>       
+         </div>     
+         <div class="modal" id="map-drawer">
+            <div class="modal-drawer right">
+               <div id="modal" class="modal-head" data-role="header">
+                  <h5>Add a Record</h5>
+                  <ul>   
+                     <li class="flex-stretch"></li>                  
+                  </ul>                  
+               </div>
+               <div class="modal-body">
+                  Firstly, you need to:
+
+                  <div data-role="main">                  
+                     
+                  <a href="#list-page">Choose an animal</a>
+
+                  <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
+                  <button class="form-button cancel-button" data-toggle="#map-drawer">Cancel</button>
+
+                  </div>
+               </div> 
+            </div>
+         </div>
+      </div>  
 
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page" class="ui-link" style="color:#512D99">Map</a></li>
-            <li><a href="#list-page" class="ui-link">List</a></li>
-            <li><a href="#user-profile-page" class="ui-link">Profile</a></li>
+            <li><a href="#recent-page" class="ui-link" style="color:#512D99"><img src="img/nav/recent2.svg"></a></li>
+            <li><a href="#list-page" class="ui-link"><img src="img/nav/animals1.svg"></a></li>
+            <li><a href="#list-page" class="ui-link"><img src="img/nav/account1.svg"></a></li>
          </ul>
       </footer>
+   </section>
+
+
+<!--    <section data-role="page" id="mini-list-page">
+      <header data-role="header" style="padding:0.6em 1.2em">
+Choose an animal
+      </header>      
+
+      <div data-role="main">
+         <div class="overscroll">     
+            <div class="animallist"></div>
+         </div>
+         <div class="floater right bottom"><a class="btn-circle" href="#animal-add-page">&plus;</a></div>
+      </div> -->
+
    </section>
 
 
@@ -328,6 +363,11 @@
 
 
    <section data-role="page" id="user-profile-page">
+      <header class="ui-header ui-bar-inherit" role="banner" style="padding:0.6em 1.2em" data-role="header">
+         <div class="" style="font-size:2em; text-align: right;">
+            <a href="#user-settings-page"> ⋰</a>
+         </div>
+      </header>
       <div data-role="main">
          <div class="overscroll">
             <div class="profile"></div>

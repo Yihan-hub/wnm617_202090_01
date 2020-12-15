@@ -1,0 +1,52 @@
+ <!-- recent-page: right drawer -->
+
+   <section data-role="page" id="recent-page" >
+
+      <header data-role="header">
+         <h2>Recent</h2>
+      </header> 
+      <div data-role="main">
+         <div class="map"></div>
+         <div class="floater right bottom">
+            <div class="btn-circle" data-toggle="#map-drawer">&plus;</div>       
+         </div>     
+         <div class="modal" id="map-drawer">
+            <div class="modal-drawer right">
+               <div id="modal" class="modal-head" data-role="header">
+                  <h5>Add a Record</h5>
+                  <ul>   
+                     <li class="flex-stretch"></li>                  
+                  </ul>                  
+               </div>
+               <div class="modal-body">
+                  Choose an animal
+                  <select name="" id="" class="form-option" data-role="none">
+                     <option>
+                        <div class="animallist">
+                     </option>
+                     
+                  </select>
+                  <hr>
+                  &#9906; Pick a location on the map and save it!
+                  <div data-role="main">
+                     <div class="overscroll">
+                        <div class="animallist"></div>
+                     </div>                     
+                  </div>
+                  <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
+                  <button class="form-button cancel-button" data-toggle="#map-drawer">Cancel</button>
+               </div> 
+            </div>
+         </div>
+      </div>  
+
+
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#recent-page" class="ui-link" style="color:#512D99"><img src="img/nav/recent2.svg"></a></li>
+            <li><a href="#list-page" class="ui-link"><img src="img/nav/animals1.svg"></a></li>
+            <li><a href="#list-page" class="ui-link"><img src="img/nav/account1.svg"></a></li>
+         </ul>
+      </footer>
+
+   </section>

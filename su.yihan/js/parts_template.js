@@ -30,6 +30,7 @@ const makeAnimalProfile = templater(o=>`
    <h2>${o.name}</h2>
    <div>Type ${o.type}</div>
    <div>Breed ${o.breed}</div>
+   <div>Health ${o.health}</div>
    <div><p>${o.description}</p></div>
 </div>`);
 
@@ -118,6 +119,14 @@ ${FormControl({
    type:'text',
    placeholder:'Type the breed',
    value:o.breed
+})}
+${FormControl({
+   namespace:'animal-edit',
+   name:'health',
+   displayname:'Health',
+   type:'text',
+   placeholder:'Type the health',
+   value:o.health
 })}
 <div class="form-control">
    <label for="animal-edit-description" class="form-label">Description</label>

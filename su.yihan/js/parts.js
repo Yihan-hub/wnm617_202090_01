@@ -9,6 +9,7 @@ const makeAnimalList = templater(o=>`
          <div class="animallist-name">${o.name}</div>
          <div class="animallist-breed"><strong>Breed</strong> ${o.breed}</div>
       </div>
+      <a href="#location-add-page" class="">Add a location</a>
    </div>
    `);
 
