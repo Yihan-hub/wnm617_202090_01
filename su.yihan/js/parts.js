@@ -98,7 +98,7 @@ ${FormControl({
    displayname:'favoriteAnimal',
    type:'text',
    placeholder:'Type your favoriteAnimal',
-   value:o.favoriteAnimal
+   value:o.name
 })}
 `;
 
