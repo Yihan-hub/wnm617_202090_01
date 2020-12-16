@@ -7,7 +7,7 @@ const makeAnimalList = templater(o=>`
       <div class="animallist-description">
          <div class="animallist-name">${o.name}</div>         
          <div class="animallist-gender"> ${o.gender}</div>
-         <div class="animallist-breed"><strong>Breed</strong> ${o.breed}</div>
+         <div class="animallist-breed" style="padding-top: 1em"><strong>Breed</strong> ${o.breed}</div>
       </div>
       <a href="#location-add-page" class="" style="margin:1em"><img src="img/icon/addlocation.svg"></a>
    </div>
@@ -16,14 +16,15 @@ const makeAnimalList = templater(o=>`
 const makeUserProfile = templater(o=>`
    <div class="user-profile-image">
       <img src="${o.img}" alt="">
-      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" alt=""></a></a>
+      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="
+    margin-right: 25vw;"alt=""></a></a>
    </div>
    <div style="padding:1em">
    <h2>Name: ${o.name}</h2>
    <h3>Username: @${o.username}</h3>
    <h3>Email: ${o.email}</h3>
    <h3>FavoriteAnimal: ${o.favoriteAnimal}</h3>
-   <div class="floater top right" style="font-size:2em"><a href="#user-settings-page"> &utdot;</a></div>
+  
    `);
 
 const makeAnimalProfile = templater(o=>`
@@ -97,8 +98,8 @@ ${FormControl({
    name:'favoriteAnimal',
    displayname:'favoriteAnimal',
    type:'text',
-   placeholder:'Type your favoriteAnimal',
-   value:o.name
+   placeholder:'Type your favorite animal',
+   value:o.favoriteAnimal
 })}
 `;
 

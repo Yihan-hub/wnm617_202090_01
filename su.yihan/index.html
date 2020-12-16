@@ -146,11 +146,11 @@
          </div>
       </div>  
 
-      <footer data-role="footer">
+      <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
-            <li><a href="#recent-page" class="ui-link" style="color:#512D99"><img src="img/nav/recent2.svg"></a></li>
-            <li><a href="#list-page" class="ui-link"><img src="img/nav/animals1.svg"></a></li>
-            <li><a href="#user-profile-page" class="ui-link"><img src="img/nav/account1.svg"></a></li>
+            <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
+            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
+            <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
          </ul>
       </footer>
    </section>
@@ -189,11 +189,11 @@
          </div>
          <div class="floater right bottom"><a class="btn-circle" href="#animal-add-page">&plus;</a></div>
       </div>
-      <footer data-role="footer">
+      <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
-            <li><a href="#recent-page">Map</a></li>
-            <li><a href="#list-page" style="color:#512D99">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
+            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
+            <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
          </ul>
       </footer>
    </section>
@@ -204,11 +204,11 @@
 
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
-         <h1>Animal Profile</h1>
+         <!-- <h1>Animal Profile</h1> -->
          <ul>
-            <li><a href="#" data-rel="back">&lsaquo;</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#animal-edit-page" style="color: #512D99; font-size: 1.5em;"> &#9998;</a></li>
+            <li><a href="#animal-edit-page"><img class="footer-img" src="img/icon/set_r.svg"></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -229,11 +229,11 @@
 
    <section data-role="page" id="animal-edit-page">
       <header data-role="header">
-         <h1>Animal Settings</h1>
+         <!-- <h1>Animal Settings</h1> -->
          <ul>
-            <li><a href="#" data-rel="back">&lsaquo;</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-animal-edit">Save</a></li>
+            <li><a href="#"><img class="js-animal-edit footer-img" src="img/icon/save_r.svg"></a></li></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -296,8 +296,6 @@
 
   
 
-   
-
 
 
 <!-- user -->
@@ -306,8 +304,8 @@
 
    <section data-role="page" id="user-profile-page">
       <header class="ui-header ui-bar-inherit" role="banner" style="padding:0.6em 1.2em" data-role="header">
-         <div class="" style="font-size:2em; text-align: right;">
-            <a href="#user-settings-page"> ⋰</a>
+         <div class="" style="text-align: right;">
+            <a href="#user-settings-page"><img class="footer-img" src="img/icon/set_r.svg"></a>
          </div>
       </header>
       <div data-role="main">
@@ -316,11 +314,11 @@
          </div>
       </div>
 
-      <footer data-role="footer">
+      <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
-            <li><a href="#recent-page" >Map</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page" style="color:#512D99">Profile</a></li>
+            <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
+            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
+            <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
          </ul>
       </footer>
    </section>
@@ -411,11 +409,11 @@
 
    <section data-role="page" id="user-upload-page">
       <header data-role="header">
-         <h1>Upload Photo</h1>
+         <!-- <h1>Upload Photo</h1> -->
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-user-upload">Save</a></li>
+            <li><a href="#animal-edit-page"><img class="footer-img" src="img/icon/save.svg"></a></li></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -448,11 +446,15 @@
 
     <section data-role="page" id="location-add-page">
       <header data-role="header">
-         <h1>Choose Location</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em;">Choose Location</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#location-description-page">Next</a></li>
+            <li><a href="#location-description-page"><img class="footer-img" src="img/icon/save_r.svg"></a></li></a></li>
+
+<!--             <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#location-description-page">Next</a></li> -->
          </ul>
       </header>
       <div data-role="main">

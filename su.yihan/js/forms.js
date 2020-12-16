@@ -24,10 +24,11 @@ const checkUserEditForm = () => {
    let username = $("#user-edit-username").val();
    let name = $("#user-edit-name").val();
    let email = $("#user-edit-email").val();
+   let favoriteAnimal = $("#user-edit-favoriteAnimal").val();
 
    query({
       type:'update_user',
-      params:[username,name,email,sessionStorage.userId]
+      params:[username,name,email,favoriteAnimal,sessionStorage.userId]
    }).then(d=>{
       if(d.error) {
          throw d.error;

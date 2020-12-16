@@ -34,7 +34,7 @@ const checkSigninForm = async() => {
       sessionStorage.removeItem('userId');
 
       // DO SOMETHING HERE
-      makeWarning("#signin-warning","Ooooops, your username or password seems incorrect.")
+      makeWarning("#signin-warning","Oops, incorrect username or password.")
    }
 
    checkUserId();
