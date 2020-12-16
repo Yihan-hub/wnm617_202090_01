@@ -1,14 +1,15 @@
-// Curried function
+
 const makeAnimalList = templater(o=>`
    <div class="animallist-item js-animal-jump" data-id="${o.id}">
       <div class="animallist-icon">
          <img src="${o.img}" alt="">
       </div>
       <div class="animallist-description">
-         <div class="animallist-name">${o.name}</div>
+         <div class="animallist-name">${o.name}</div>         
+         <div class="animallist-gender"> ${o.gender}</div>
          <div class="animallist-breed"><strong>Breed</strong> ${o.breed}</div>
       </div>
-      <a href="#location-add-page" class="">Add a location</a>
+      <a href="#location-add-page" class="" style="margin:1em"><img src="img/icon/addlocation.svg"></a>
    </div>
    `);
 
@@ -31,9 +32,9 @@ const makeAnimalProfile = templater(o=>`
       <img src="${o.img}" alt="">
    </div>
    <h2>${o.name}</h2>
+   <div>Gender: ${o.gender}</div>
    <div>Type: ${o.type}</div>
    <div>Breed: ${o.breed}</div>
-   <div>Health: ${o.health}</div>
    <div><p>${o.description}</p></div>
    <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
@@ -48,9 +49,8 @@ const makeAnimalPopup = o => `
    </div>
    <div class="flex-none animal-popup-description">
       <h2>${o.name}</h2>
-      <div>${o.type}</div>
+      <div>${o.gender}</div>
       <div>${o.breed}</div>
-      <div>${o.health}</div>
    </div>
    <div class="form-button js-animal-jump" data-id="${o.animal_id}" style="width:100%">Visit</div>
 </div>
@@ -120,6 +120,14 @@ ${FormControl({
 })}
 ${FormControl({
    namespace:'animal-edit',
+   name:'gender',
+   displayname:'Gender',
+   type:'text',
+   placeholder:'Boy or girl?',
+   value:o.gender
+})}
+${FormControl({
+   namespace:'animal-edit',
    name:'type',
    displayname:'Type',
    type:'text',
@@ -134,14 +142,6 @@ ${FormControl({
    placeholder:'Type the breed',
    value:o.breed
 })}
-${FormControl({
-   namespace:'animal-edit',
-   name:'health',
-   displayname:'Health',
-   type:'text',
-   placeholder:'Describe the health',
-   value:o.health
-})}
 <div class="form-control">
    <label for="animal-edit-description" class="form-label">Description</label>
    <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type a description" style="height:6em">${o.description}</textarea>
@@ -155,6 +155,10 @@ const drawAnimalList = (a,empty_phrase="No animals yet, come on, add some.") => 
       a.length ? makeAnimalList(a) : empty_phrase
    )
 }
+
+
+
+
 
 // fixed, Dec 10
 const capitalize = s => s=='' ? '' : s[0].toUpperCase()+s.substr(1);

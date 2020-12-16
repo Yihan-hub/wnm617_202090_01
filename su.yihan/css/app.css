@@ -533,7 +533,7 @@ div#modal {
 /* ANIMAL LIST */
 .animallist-icon img {
    width: 100px;
-   height: 80px;
+   height:100px;
    vertical-align: text-bottom;
    object-fit: cover;
 }

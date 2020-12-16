@@ -39,13 +39,15 @@
     user_id:'{{integer(1,11)}}',
     
     name:'{{company()}}',
+
+    gender: '{{gender()}}',
     
     type:'{{random("dog","cat")}}',    
 
     breed:function(tags){
       var breeds = {
-        dog:["Alaska Malamute","Corgi","American Eskimo Dog"],
-        cat:["Bombay cat","American Shorthair Cat","Birman Cat"]
+        dog:["Alaska Malamute Dog","Corgi Dog","American Eskimo Dog"],
+        cat:["Bombay Cat","American Shorthair Cat","Birman Cat"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);
