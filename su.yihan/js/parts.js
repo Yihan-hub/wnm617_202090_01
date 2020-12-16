@@ -16,15 +16,13 @@ const makeAnimalList = templater(o=>`
 const makeUserProfile = templater(o=>`
    <div class="user-profile-image">
       <img src="${o.img}" alt="">
-      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="
-    margin-right: 25vw;"alt=""></a></a>
+      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="margin-right: 25vw;"alt=""></a></a>
    </div>
    <div style="padding:1em">
    <h2>Name: ${o.name}</h2>
    <h3>Username: @${o.username}</h3>
    <h3>Email: ${o.email}</h3>
-   <h3>FavoriteAnimal: ${o.favoriteAnimal}</h3>
-  
+   <h3>FavoriteAnimal: ${o.favoriteAnimal}</h3>  
    `);
 
 const makeAnimalProfile = templater(o=>`
@@ -37,7 +35,6 @@ const makeAnimalProfile = templater(o=>`
    <div>Type: ${o.type}</div>
    <div>Breed: ${o.breed}</div>
    <div><p>${o.description}</p></div>
-   <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
 
 // NOV 12 Animal popup on recent page, linking to Animal profile
@@ -147,6 +144,7 @@ ${FormControl({
    <label for="animal-edit-description" class="form-label">Description</label>
    <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type a description" style="height:6em">${o.description}</textarea>
 </div>
+<div><a href="#" class="js-animal-delete" data-id="${o.id}" style="color: var(--color-main-dark)">Delete</a></div>
 `;
 
 

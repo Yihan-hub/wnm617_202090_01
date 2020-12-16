@@ -123,7 +123,7 @@ const checkAnimalDelete = id => {
       if(d.error) {
          throw d.error;
       }
-      window.history.back();
+      window.history.go(-2);
    })
 }
 

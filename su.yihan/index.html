@@ -39,7 +39,7 @@
 <body>
 
 
-   <section data-role="page" id="signin-page" style="background-color: #F7D7C8">
+   <section data-role="page" id="signin-page" style="background-color: var(--color-main-light);">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
             <img src="./site_logo_signin.png" style="width:40vw;height:40vw;" class="icon" alt="">
@@ -129,17 +129,18 @@
          <div class="modal" id="map-drawer">
             <div class="modal-drawer right">
                <div id="modal" class="modal-head" data-role="header">
-                  <h5>Add a Record</h5>
+                  <h1 style="/*padding: 1em 1.5em; */font-size: 1em;color: var(--color-neutral-medium);">Add a Record</h1>
                   <ul>   
-                     <li class="flex-stretch"></li>                  
-                  </ul>                  
+                     <li class="flex-stretch"></li> 
+                     <li><img class="footer-img" src="img/icon/close.svg" data-toggle="#map-drawer"></li>         
+                  </ul>         
                </div>
-               <div class="modal-body">
-                  Firstly, you need to:
-                  <div data-role="main">                    
-                  <a href="#list-page">Choose an animal</a>
-                  <button class="form-button save-button" data-toggle="#map-drawer">Save</button>
-                  <button class="form-button cancel-button" data-toggle="#map-drawer">Cancel</button>
+               <div class="modal-body" style="color: var(--color-neutral-medium)">
+                  <p>Firstly, you need to:</p>
+                  <div data-role="main">
+                  <a href="#list-page" class="form-button ui-link" style="width: 85%; margin-top: 2em; color: white;">Choose an animal</a>          
+                  <a href="#animal-add-page" class="form-button ui-link" style="width: 85%; margin-top: 2em; color: var(--color-accent);background-color: var(--color-main-medium)">Add an animal</a>              
+                  <button class="form-button cancel-button" data-toggle="#map-drawer" style="width: 85%; margin-top: 18em;">Cancel</button>
                   </div>
                </div> 
             </div>
@@ -192,7 +193,7 @@
       <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
             <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
-            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
+            <li><a href="#list-page"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
             <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
          </ul>
       </footer>
@@ -246,11 +247,11 @@
 
    <section data-role="page" id="animal-add-page">
       <header data-role="header">
-         <h1>Add an Animal</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">Add an Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back">&lsaquo;</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-animal-add">Save</a></li>
+            <li><a href="#" class="js-animal-add"><img class="footer-img" src="img/icon/save_r.svg"></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -332,9 +333,9 @@
 
    <section data-role="page" id="user-settings-page">
       <header data-role="header">
-         <h1>User Settings</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">User Settings</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -355,11 +356,11 @@
 
    <section data-role="page" id="user-edit-page">
       <header data-role="header">
-         <h1>User Info</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">User Info</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-user-edit">Save</a></li>
+            <li><a href="#" class="js-user-edit"><img class="footer-img" src="img/icon/save_r.svg"></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -413,7 +414,7 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#animal-edit-page"><img class="footer-img" src="img/icon/save.svg"></a></li></a></li>
+            <li><a href="#" class="js-user-upload"><img class="footer-img" src="img/icon/save_r.svg"></a></li></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -446,15 +447,11 @@
 
     <section data-role="page" id="location-add-page">
       <header data-role="header">
-         <h1 style="padding: 1em 1.5em; font-size: 1em;">Choose Location</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">Choose Location</h1>
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#location-description-page"><img class="footer-img" src="img/icon/save_r.svg"></a></li></a></li>
-
-<!--             <li><a href="#" data-rel="back">Back</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#location-description-page">Next</a></li> -->
+            <li><a href="#location-description-page"><img class="footer-img" src="img/icon/next.svg"></a></li></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -466,11 +463,11 @@
 
    <section data-role="page" id="location-description-page">
       <header data-role="header">
-         <h1>Describe the Animal</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">Describe the Location</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-location-add">Save</a></li>
+            <li><a href="#" class="js-location-add"><img class="footer-img" src="img/icon/save_r.svg"></a></li>
          </ul>
       </header>
       <div data-role="main">

@@ -9,7 +9,7 @@
    --font-serif:Georgia, serif;
 
    --color-neutral-lighter:#f0f0f1;
-   --color-neutral-light:#e0e0e5; /*#A794D0;*/
+   --color-neutral-light:#f5f5f4; /*#A794D0;*/
    --color-neutral-mediumer:#94949b;
    --color-neutral-medium:#83838f;/* #707070;*/
    --color-neutral-dark:#30304e; /*#3F3E3E;*/
@@ -32,6 +32,12 @@ body {
    font-family: 'Quicksand', sans-serif;
 
 }
+
+
+/*h2 {
+  color: var(--color-accent);
+  font-family: 'Roboto Slab', serif;
+}*/
 
 h1,
 h2,
@@ -386,11 +392,13 @@ div#modal {
    transition: all 0.3s;
   /* box-shadow:0 0 5px rgba(0,0,0,0.15);*/
    border-radius: 2em 2em 0 0;
+   margin: 1em;
 }
 .modal-drawer.left,
 .modal-drawer.right {
-   height: 100%;
+   height: 80%;
    width:70vw;
+   margin-top: 2em;
 }
 .modal-drawer.left { left: 0; transform:translateX(-100%); }
 .modal-drawer.right { right: 0; transform:translateX(100%); }
@@ -461,7 +469,7 @@ div#modal {
 
 /* CIRCLE */
 .btn-circle {
-   background-color:#09489C/*var(--color-white)*/;
+   background-color: var(--color-main-dark);
    color: white;
    width:4rem;
    height:4rem;
@@ -656,7 +664,7 @@ select.form-option {
 
 .cancel-button {
   color: black;
-  background-color: #e0e0e5;
+  background-color:var(--color-neutral-light);
 }
 
 /*FORM-DEFAULT*/
