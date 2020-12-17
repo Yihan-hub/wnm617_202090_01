@@ -145,7 +145,7 @@ a {
     width: 100%;
     display: inline-block;
     border-width: 0;
-    background-color: #2094B7 /*#09489C*//*var(--color-main-dark)*/;
+    background-color: var(--color-main-dark);
     padding: 0.5em 1em;
     border-radius: 1.2em;
     font: inherit;
