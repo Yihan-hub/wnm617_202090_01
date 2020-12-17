@@ -12,7 +12,7 @@
 
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Ani-Trace</title>
+   <title>Animal Tracker</title>
 
 
    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
@@ -40,6 +40,7 @@
 
 
    <section data-role="page" id="signin-page" style="background-color: var(--color-main-light);">
+      <h1 style="font-size: 2em;margin-top: 4em;text-align: center;">Animal Tracker</h1>
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
             <img src="./site_logo_signin.png" style="width:40vw;height:40vw;" class="icon" alt="">
@@ -194,7 +195,7 @@
          <div class="overscroll">     
             <div class="animallist"></div>
          </div>
-         <div class="floater right bottom" ><a class="btn-circle" href="#animal-add-page" style="background-color: white; color: var(--color-main-dark)">&plus;</a></div>
+         <div class="floater right bottom" ><a class="btn-circle" href="#animal-add-page" style="background-color: white; color: var(--color-main-dark);margin-bottom: 2em;">&plus;</a></div>
       </div>
       <footer data-role="footer" class="floater bottom"style="background-color: var(--color-main-dark);margin: 4vw;width: 92vw;">
          <ul>
@@ -398,7 +399,7 @@
           <div class="overscroll">
             <form id="user-password-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
-                  <label for="user-password-oldpassword" class="form-label">Old Password</label>
+                  <label for="user-password-oldpassword" class="form-label">Previous Password</label>
                   <input id="user-password-oldpassword" type="password" class="form-input" data-role="none" placeholder="Type your old password">
                </div>
                <div class="form-control">
