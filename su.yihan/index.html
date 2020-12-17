@@ -149,8 +149,8 @@
 
       <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
-            <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
-            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
+            <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_underline.svg"></a></li>
+            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals.svg"></a></li>
             <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
          </ul>
       </footer>
@@ -160,7 +160,13 @@
 
 
 
-
+   <section data-role="page" id="recent-list-page">      
+      <div data-role="main">
+         <div class="overscroll">     
+            <div class="animallist"></div>
+         </div>
+      </div>      
+   </section>
 
 
 
@@ -193,7 +199,7 @@
       <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
             <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
-            <li><a href="#list-page"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
+            <li><a href="#list-page"><img class="footer-img" src="img/nav/animals_underline.svg"></a></li>
             <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
          </ul>
       </footer>
@@ -318,8 +324,8 @@
       <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
             <li><a href="#recent-page"><img class="footer-img" src="img/nav/recent_w.svg"></a></li>
-            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals_w.svg"></a></li>
-            <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_w.svg"></a></li>
+            <li><a href="#list-page" style="color:#512D99"><img class="footer-img" src="img/nav/animals.svg"></a></li>
+            <li><a href="#user-profile-page"><img class="footer-img" src="img/nav/account_underline.svg"></a></li>
          </ul>
       </footer>
    </section>
@@ -363,10 +369,11 @@
             <li><a href="#" class="js-user-edit"><img class="footer-img" src="img/icon/save_r.svg"></a></li>
          </ul>
       </header>
-      <div data-role="main">
-         <div class="overscroll">
-            <form id="user-edit-form" data-ajax="false" style="padding:1em">
+      <div data-role="main" style="background-color: var(--color-main-dark);">
+         <div class="overscroll" id="profile-edit-form" >
+            <form id="user-edit-form" data-ajax="false" >
             </form>
+            <input data-role="none" id="save" class="js-user-edit form-button" value="save">
          </div>
       </div>
    </section>

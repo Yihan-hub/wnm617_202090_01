@@ -130,7 +130,7 @@ a {
     border-width: 0;
     background-color: var(--color-neutral-lighter);
     padding: 0.5em 1em;
-    border-radius: 1.2em;
+    border-radius: 0.5em;
     font: inherit;
     outline: 0;
 }
@@ -147,9 +147,29 @@ a {
     color:#e8e8e8;
 }
 .form-button:hover {
-   text-decoration:none;
-   cursor:pointer;
+    text-decoration:none;
+    cursor:pointer;
 }
+
+div#profile-edit-form {
+    background-color: white; 
+    height: 50vh;
+    width: 88vw; 
+    margin: 6vw; 
+    border-radius: 1.5em;
+}
+#user-edit-form {
+    padding:2em;
+    border-radius: 1.5em;
+}
+#save {
+  width: 30vw;
+  display: flex;
+  margin-left: 52vw;
+}
+
+
+
 
 
 
@@ -455,6 +475,7 @@ div#modal {
 .floater.left { left: 1em; }
 .floater.top { top: 1em; }
 .floater.bottom { bottom: 1em; }
+.floater.bottom.center { bottom: 1em; }
 
 
 /* FLOATER-FOOTER */
