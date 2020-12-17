@@ -21,8 +21,7 @@ const makeUserProfile = templater(o=>`
    <div style="padding:1em">
    <h2>Name: ${o.name}</h2>
    <h3>Username: @${o.username}</h3>
-   <h3>Email: ${o.email}</h3>
-   <h3>FavoriteAnimal: ${o.favoriteAnimal}</h3>  
+   <h3>Email: ${o.email}</h3>  
    `);
 
 const makeAnimalProfile = templater(o=>`
@@ -89,14 +88,6 @@ ${FormControl({
    type:'text',
    placeholder:'Type your email',
    value:o.email
-})}
-${FormControl({
-   namespace:'user-edit',
-   name:'favoriteAnimal',
-   displayname:'favoriteAnimal',
-   type:'text',
-   placeholder:'Type your favorite animal',
-   value:o.favoriteAnimal
 })}
 `;
 
