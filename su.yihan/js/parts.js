@@ -19,9 +19,9 @@ const makeUserProfile = templater(o=>`
       <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="margin-right: 25vw;"alt=""></a></a>
    </div>
    <div style="padding:1em">
-   <h2>Name: ${o.name}</h2>
-   <h3>Username: @${o.username}</h3>
-   <h3>Email: ${o.email}</h3>  
+   <h3><strong> ${o.name}</strong></h3>
+   <h4>Username: @${o.username}</h4>
+   <h4>Email: ${o.email}</h4>  
    `);
 
 const makeAnimalProfile = templater(o=>`
@@ -29,19 +29,38 @@ const makeAnimalProfile = templater(o=>`
    <div class="animal-profile-image">
       <img src="${o.img}" alt="">
    </div>
-   <h2>${o.name}</h2>
-   <div>Gender: ${o.gender}</div>
-   <div>Type: ${o.type}</div>
-   <div>Breed: ${o.breed}</div>
+   <h3>${o.name}</h3>
+   <div><strong>Gender:</strong> ${o.gender}</div>
+   <div><strong>Type:</strong> ${o.type}</div>
+   <div><strong>Breed:</strong> ${o.breed}</div>
    <div><p>${o.description}</p></div>
 </div>`);
 
 // NOV 12 Animal popup on recent page, linking to Animal profile
+// const makeAnimalPopup = o => `
+// <div class="display-flex animal-popup" style="flex-wrap:wrap">
+//    <div class="flex-none">
+//       <div class="animal-image">
+//          <img src="${o.img}" alt="">
+//       </div>
+//    </div>
+//    <div class="flex-none animal-popup-description">
+//       <h2>${o.name}</h2>
+//       <div>${o.gender}</div>
+//       <div>${o.breed}</div>
+//    </div>
+//    <div class="form-button js-animal-jump" data-id="${o.animal_id}" style="width:100%">Visit</div>
+//    <a href="#location-add-page" class="" style="margin:1em"><img src="img/icon/addlocation.svg"></a>
+// </div>
+
+// <a href="#location-add-page" class="form-button" style="margin:1em">Add a location</a>
+
 const makeAnimalPopup = o => `
 <div class="display-flex animal-popup" style="flex-wrap:wrap">
    <div class="flex-none">
-      <div class="animal-image">
-         <img src="${o.img}" alt="">
+      <div class="animal-image js-animal-jump" data-id="${o.animal_id}">
+         <img src="${o.img}"  alt="">
+         <a href="#location-add-page" class="" ><img src="img/icon/addlocation.svg" style="height:82px;"></a>
       </div>
    </div>
    <div class="flex-none animal-popup-description">
@@ -49,8 +68,8 @@ const makeAnimalPopup = o => `
       <div>${o.gender}</div>
       <div>${o.breed}</div>
    </div>
-   <div class="form-button js-animal-jump" data-id="${o.animal_id}" style="width:100%">Visit</div>
 </div>
+
 `;
 
 
@@ -135,7 +154,7 @@ ${FormControl({
    <label for="animal-edit-description" class="form-label">Description</label>
    <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type a description" style="height:6em">${o.description}</textarea>
 </div>
-<div><a href="#" class="js-animal-delete" data-id="${o.id}" style="color: var(--color-main-dark)">Delete</a></div>
+<div> <input data-role="none" id="save" class="js-animal-edit form-button" value="save"><a href="#" class="js-animal-delete" data-id="${o.id}" style="margin-left: 60vw;color: var(--color-main-dark)">Delete</a></div>
 `;
 
 

@@ -183,7 +183,7 @@
          </form>
       </header>      
       <header data-role="header">
-         <div class="filter-list">
+         <div class="filter-list" style="padding-left: 0.8em;">
             <!-- <div class="filter" data-field="type" data-value="">All</div>
            <div class="filter" data-field="type" data-value="cat">Cat</div>
             <div class="filter" data-field="type" data-value="dog">Dog</div>
@@ -194,7 +194,7 @@
          <div class="overscroll">     
             <div class="animallist"></div>
          </div>
-         <div class="floater right bottom"><a class="btn-circle" href="#animal-add-page">&plus;</a></div>
+         <div class="floater right bottom" ><a class="btn-circle" href="#animal-add-page" style="background-color: white; color: var(--color-main-dark)">&plus;</a></div>
       </div>
       <footer data-role="footer" style="background-color: var(--color-main-dark);">
          <ul>
@@ -215,7 +215,7 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#animal-edit-page"><img class="footer-img" src="img/icon/set_r.svg"></a></li>
+            <li><a href="#animal-edit-page"><img class="footer-img" src="img/icon/set_r.svg" style="padding-top: .6em;"></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -240,7 +240,7 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#"><img class="js-animal-edit footer-img" src="img/icon/save_r.svg"></a></li></a></li>
+            <!-- <li><a href="#"><img class="js-animal-edit footer-img" src="img/icon/save_r.svg"></a></li> -->
          </ul>
       </header>
       <div data-role="main">
@@ -257,7 +257,7 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-animal-add"><img class="footer-img" src="img/icon/save_r.svg"></a></li>
+            <!-- <li><a href="#" class="js-animal-add"><img class="footer-img" src="img/icon/save_r.svg"></a></li> -->
          </ul>
       </header>
       <div data-role="main">
@@ -292,6 +292,8 @@
                   <textarea id="animal-add-description"  class="form-input" data-role="none" placeholder="Add some description of the animal"></textarea>
                </div>
             </form>
+
+            <div> <input data-role="none" id="save" class="js-animal-add form-button" value="save" style="margin-left: 65vw;"></div>
          </div>       
       </div>
    </section>
@@ -312,7 +314,7 @@
    <section data-role="page" id="user-profile-page">
       <header class="ui-header ui-bar-inherit" role="banner" style="padding:0.6em 1.2em" data-role="header">
          <div class="" style="text-align: right;">
-            <a href="#user-settings-page"><img class="footer-img" src="img/icon/set_r.svg"></a>
+            <a href="#user-settings-page"><img class="footer-img" src="img/icon/set_r.svg" style="padding-right: 0em;"></a>
          </div>
       </header>
       <div data-role="main">
@@ -347,11 +349,11 @@
       <div data-role="main">
          <ul class="settings-list">
             <li><a href="#user-edit-page">
-               <img src="img/icon/edit.svg" alt="" class="icon">Update Profile</a></li>
+               <!-- <img src="img/icon/edit.svg" alt="" class="icon"> -->Update Profile</a></li>
             <li><a href="#user-password-page">
-                  <img src="img/icon/key.svg" alt="" class="icon">Change Password</a></li>
+                  <!-- <img src="img/icon/key.svg" alt="" class="icon"> -->Change Password</a></li>
             <li><a href="#" class="js-logout">
-               <img src="img/icon/logout.svg" alt="" class="icon">
+               <!-- <img src="img/icon/logout.svg" alt="" class="icon"> -->
             Logout</a></li>
          </ul>
       </div>
@@ -362,11 +364,12 @@
 
    <section data-role="page" id="user-edit-page">
       <header data-role="header">
-         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">User Info</h1>
+         <h1 style="padding: 1.5em 1.5em; font-size: 1em; left: 33vw">User Info</h1>
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-user-edit"><img class="footer-img" src="img/icon/save_r.svg"></a></li>
+            <!-- <li><a href="#" class="js-user-edit"><img class="footer-img" src="img/icon/save_r.svg"></a></li> -->
+            <!-- <img class="js-user-edit footer-img" src="img/icon/done.svg" style="padding-top: 0em;width: 27%;padding-right: .6em;"> -->
          </ul>
       </header>
       <div data-role="main" style="background-color: var(--color-main-dark);">
@@ -384,11 +387,11 @@
 
    <section data-role="page" id="user-password-page">
       <header data-role="header">
-         <h1>Change Password</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">Change Password</h1>
          <ul>
-            <li><a href="#" data-rel="back">&lsaquo;</a></li>
+            <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="back">&#10003;</a></li>
+<!--             <li><a href="#" data-rel="back">&#10003;</a></li> -->
          </ul>
       </header>
       <div data-role="main">
@@ -408,6 +411,10 @@
                   <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
                </div>
             </form>
+            <a href="#" data-rel="back"><input data-role="none" id="save" class="form-button" value="save" style="margin-left: 65vw;margin-top: 2em;"></a>
+
+            
+
          </div>
       </div>
    </section>
@@ -431,7 +438,10 @@
                <input type="file" data-role="none" id="user-upload-input">
             </label>
          </form>
-         <label for="user-upload-input" class="form-button">Choose Image</label>
+         
+        <!--  <img src="img/add-photo.svg" alt="" style="margin:7em"> -->
+
+        <label for="user-upload-input" class="form-button" style="width: 48vw;margin-left: 26vw;margin-top: 20vw;">Choose an Image</label>
       </div>
    </section>
 
@@ -454,11 +464,12 @@
 
     <section data-role="page" id="location-add-page">
       <header data-role="header">
-         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 30vw">Choose Location</h1>
+         <h1 style="padding: 1em 1.5em; font-size: 1em; left: 26vw;margin-top: 1vh; margin-left: -6vw;">Choose a Location</h1>
          <ul>
             <li><a href="#" data-rel="back"><img class="footer-img" src="img/icon/back_r.svg"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#location-description-page"><img class="footer-img" src="img/icon/next.svg"></a></li></a></li>
+            <!-- <li><a href="#location-description-page"><img class="footer-img" src="img/icon/next.svg"></a></li> -->
+            <li><a href="#" class="js-location-add"><img class="footer-img" src="img/icon/done.svg" style="padding-top: 0.8em;width: 92%;padding-right: .6em;"></a></li>
          </ul>
       </header>
       <div data-role="main">

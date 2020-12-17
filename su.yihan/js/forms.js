@@ -106,7 +106,7 @@ const checkLocationAddForm = () => {
 
       console.log(d);
 
-      window.history.go(-2);
+      window.history.back();
    })
 }
 

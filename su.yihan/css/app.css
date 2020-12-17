@@ -41,15 +41,22 @@ body {
 
 h1,
 h2,
-h3,
-h4,
+
 h5,
 h6 {
    color:var(--color-main-dark);
    /*font-family:var(--font-serif);*/
    font-family: 'Roboto Slab', serif;
 }
+h3 {
+  font-size: 17pt;
+  font-weight: medium;
+}
 
+h4 {
+  font-size: 15pt;
+  color: var(--color-neutral-medium);
+}
 /*Dec 1*/
 header {
     /*padding-left: 2em;*/
@@ -166,6 +173,7 @@ div#profile-edit-form {
   width: 30vw;
   display: flex;
   margin-left: 52vw;
+  margin-bottom: 1em;
 }
 
 
@@ -542,11 +550,11 @@ div#modal {
   margin:0;
 }
 .settings-list li {
-  padding: 0.5em 1em;
+  padding: 1em 1em;
 
 }
 .settings-list li:not(:first-child) {
-  border-top: 1px solid var(--color-neutral-medium);
+  border-top: 0.5px solid var(--color-neutral-lighter);
 
   }
 .settings-list a{
@@ -640,6 +648,7 @@ a#list-add {
 /*NOV 12 NOV 28*/
 .animal-popup img {
   width: 80px;
+  border-radius: 1em
 }
 .animal-popup h2 {
   margin: 0;
@@ -727,11 +736,11 @@ p {
 
 /*aftermidterm*/
 /*user settings*/
-h3 {
+/*h3 {
     font-size: 1.5em;
     text-align: center;
     color: #A794D0;
-}
+}*/
 a.change-password.ui-link {
     margin-left: 1em;
     font-size: 0.9em;
