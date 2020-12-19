@@ -206,13 +206,24 @@ div#profile-edit-form {
 
 
 
-
-/*Nov 24*/
-input.form-button.signin {
-    margin-top: 4em;
+/*SIGN IN*/
+h1 {
+  font-size: 2em;
+  margin-top: 4em;
+  text-align: center;
+  color: var(--color-neutral-dark);
 }
-
-
+input.form-button.signin {
+    margin-top: 1em;
+}
+section#signin-page {
+  background-color: var(--color-main-light);
+}
+img.icon {
+    width: 40vw;
+    height: 40vw;
+    margin-top: -4em;
+}
 
 /* PAGE LAYOUTS */
 .ui-mobile .ui-page-active {
@@ -825,7 +836,7 @@ th {
    margin-top: 2em;
 }
 .image-uploader.thumbnail::before {
-   color:black;
+   color:var(--color-neutral-mediumer);
    content:'+';
    position:absolute;
    top:50%;

@@ -16,7 +16,7 @@ const makeAnimalList = templater(o=>`
 const makeUserProfile = templater(o=>`
    <div class="user-profile-image">
       <img src="${o.img}" alt="">
-      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="margin-right: 25vw;"alt=""></a></a>
+      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="margin-right: 25vw;margin-bottom:1em;width: 4vw;height: 4vw;"alt=""></a></a>
    </div>
    <div style="padding:1em">
    <h3><strong> ${o.name}</strong></h3>
