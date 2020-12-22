@@ -19,7 +19,7 @@ const makeUserProfile = templater(o=>`
       <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" style="margin-right: 25vw;margin-bottom:1em;width: 4vw;height: 4vw;"alt=""></a></a>
    </div>
    <div style="padding:1em">
-   <h3><strong> ${o.name}</strong></h3>
+   <h3><strong style="color: var(--color-main-dark)"> ${o.name}</strong></h3>
    <h4>Username: @${o.username}</h4>
    <h4>Email: ${o.email}</h4>  
    `);
@@ -29,11 +29,16 @@ const makeAnimalProfile = templater(o=>`
    <div class="animal-profile-image">
       <img src="${o.img}" alt="">
    </div>
-   <h3>${o.name}</h3>
-   <div><strong>Gender:</strong> ${o.gender}</div>
-   <div><strong>Type:</strong> ${o.type}</div>
-   <div><strong>Breed:</strong> ${o.breed}</div>
-   <div><p>${o.description}</p></div>
+   <h3 class="animal-profile-name">${o.name}</h3>
+   <div class="animal-profile-item">Gender:<strong style="color:var(--color-main-dark)">${o.gender}</strong></div>
+   <div class="animal-profile-item">Type:<strong style="color:var(--color-main-dark)">${o.type}</strong></div>
+   <div class="animal-profile-item">Breed:<strong style="color:var(--color-main-dark)"> ${o.breed}</strong></div>
+   <div class="animal-profile-description">
+      <p><strong>Description: </strong>
+      <br>
+      ${o.description}
+      </p>
+   </div>
 </div>`);
 
 // NOV 12 Animal popup on recent page, linking to Animal profile
@@ -60,7 +65,7 @@ const makeAnimalPopup = o => `
    <div class="flex-none">
       <div class="animal-image js-animal-jump" data-id="${o.animal_id}">
          <img src="${o.img}"  alt="">
-         <a href="#location-add-page" class="" ><img src="img/icon/addlocation.svg" style="height:82px;"></a>
+         <a href="#location-add-page" class="" ><img src="img/icon/addlocation.svg" style="height:78px;"></a>
       </div>
    </div>
    <div class="flex-none animal-popup-description">
